@@ -3,20 +3,22 @@ package Modelo;
 import java.util.Objects;
 
 public class Ong {
+    private final String ID;
     private String nomeOng;
-    private String usernameOng;
+    private String username;
     private String cnpj;
     private String endereco;
     private String senha;
     private String descricao;
 
-    public Ong(String nomeOng, String usernameOng, String cnpj, String endereco, String senha, String descricao) {
+    public Ong(String nomeOng, String username, String cnpj, String endereco, String senha, String descricao) {
+        ID = "ONG";
         this.nomeOng = nomeOng;
-        this.usernameOng = usernameOng;
+        this.username = username;
         this.cnpj = cnpj;
         this.endereco = endereco;
         this.senha = senha;
-        this.descricao = descrição;
+        this.descricao = descricao;
     }
 
     public String getNomeOng() {
@@ -27,12 +29,12 @@ public class Ong {
         this.nomeOng = nomeOng;
     }
 
-    public String getUsernameOng() {
-        return usernameOng;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUsernameOng(String usernameOng) {
-        this.usernameOng = usernameOng;
+    public void setUsernameOng(String username) {
+        this.username = username;
     }
 
     public String getCnpj() {
@@ -72,12 +74,12 @@ public class Ong {
         if (this == o) return true;
         if (!(o instanceof Ong)) return false;
         Ong ong = (Ong) o;
-        return Objects.equals(usernameOng, ong.usernameOng) &&
+        return Objects.equals(username, ong.username) &&
                 Objects.equals(cnpj, ong.cnpj);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(usernameOng, cnpj);
+        return Objects.hash(username, cnpj);
     }
 }

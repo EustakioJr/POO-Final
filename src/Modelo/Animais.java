@@ -1,15 +1,13 @@
 package Modelo;
 
-import java.time.LocalDate;
-
 public class Animais {
     private String nome;
     private String especie;
     private String ongPertencente;
-    private LocalDate idade;
+    private int idade;
     private boolean castrado;
 
-    public Animais(String nome, String especie, String ongPertencente, LocalDate idade, boolean castrado) {
+    public Animais(String nome, String especie, String ongPertencente, int idade, boolean castrado) {
         this.nome = nome;
         this.especie = especie;
         this.ongPertencente = ongPertencente;
@@ -41,11 +39,11 @@ public class Animais {
         this.ongPertencente = ongPertencente;
     }
 
-    public LocalDate getidade() {
+    public int getidade() {
         return idade;
     }
 
-    public void setidade(LocalDate idade) {
+    public void setidade(int idade) {
         this.idade = idade;
     }
 
