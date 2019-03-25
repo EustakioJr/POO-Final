@@ -1,6 +1,6 @@
 package Modelo;
 
-public class Clinicas {
+public class Clinicas  {
 
     private final String ID;
     private String nome;
@@ -15,6 +15,19 @@ public class Clinicas {
         this.username = username;
         this.endereco = endereco;
         this.cnpj = cnpj;
+        this.descricao = descricao;
+    }
+
+    @SuppressWarnings("WeakerAccess")
+    public String getID() {
+        return ID;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
 
@@ -56,5 +69,10 @@ public class Clinicas {
 
     public void setdescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    @Override
+    public String toString() {
+        return getID();
     }
 }

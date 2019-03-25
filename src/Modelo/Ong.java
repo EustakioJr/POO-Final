@@ -21,6 +21,11 @@ public class Ong {
         this.descricao = descricao;
     }
 
+    @SuppressWarnings("WeakerAccess")
+    public String getID() {
+        return ID;
+    }
+
     public String getNomeOng() {
         return nomeOng;
     }
@@ -33,7 +38,7 @@ public class Ong {
         return username;
     }
 
-    public void setUsernameOng(String username) {
+    public void setUsername(String username) {
         this.username = username;
     }
 
@@ -81,5 +86,10 @@ public class Ong {
     @Override
     public int hashCode() {
         return Objects.hash(username, cnpj);
+    }
+
+    @Override
+    public String toString() {
+        return getID();
     }
 }
