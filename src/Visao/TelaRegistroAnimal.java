@@ -6,14 +6,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class TelaRegistro extends Application {
+public class TelaRegistroAnimal extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("Visao.TelaRegistroAnimal.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("TelaRegistroAnimal.fxml"));
         primaryStage.setTitle("Registro Animal");
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
     }
-    public static void main(String[] args) {launch(args);}
+    public static void main(String[] args) {
+        launch(args);
+    }
 }

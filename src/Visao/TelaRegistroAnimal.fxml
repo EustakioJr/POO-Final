@@ -6,19 +6,16 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.ControleRegistroAnimal">
-   <Button fx:id="botaoRegistro" layoutX="274.0" layoutY="278.0" mnemonicParsing="false" onAction="#avisoConclusao"
-           text="Registrar"/>
-   <Label fx:id="labelAviso" layoutX="282.0" layoutY="322.0" prefHeight="17.0" prefWidth="48.0"/>
-   <TextField fx:id="textNome" layoutX="232.0" layoutY="74.0"/>
-   <Label layoutX="137.0" layoutY="78.0" text="Nome do animal:"/>
-   <TextField fx:id="textEspecie" layoutX="232.0" layoutY="113.0"/>
-   <Label layoutX="181.0" layoutY="117.0" text="Especie:"/>
-   <TextField fx:id="textIdade" layoutX="232.0" layoutY="155.0"/>
-   <TextField fx:id="textOng" layoutX="232.0" layoutY="194.0"/>
-   <Label layoutX="191.0" layoutY="159.0" text="Idade:"/>
-   <Label layoutX="195.0" layoutY="198.0" text="ONG:"/>
-   <CheckBox fx:id="checkCastrado" layoutX="246.0" layoutY="236.0" mnemonicParsing="false" text="Animal Castrado"/>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.ControleRegistroAnimal">
+   <Button layoutX="274.0" layoutY="278.0" mnemonicParsing="false" onAction="#avisoConclusao" text="Registrar" />
+   <Label fx:id="labelAviso" layoutX="199.0" layoutY="323.0" prefHeight="17.0" prefWidth="215.0" />
+   <TextField fx:id="textNome" layoutX="232.0" layoutY="74.0" />
+   <Label layoutX="137.0" layoutY="78.0" text="Nome do animal:" />
+   <TextField fx:id="textEspecie" layoutX="232.0" layoutY="113.0" />
+   <Label layoutX="181.0" layoutY="117.0" text="Especie:" />
+   <TextField fx:id="textIdade" layoutX="232.0" layoutY="155.0" />
+   <TextField fx:id="textOng" layoutX="232.0" layoutY="194.0" />
+   <Label layoutX="191.0" layoutY="159.0" text="Idade:" />
+   <Label layoutX="195.0" layoutY="198.0" text="ONG:" />
+   <CheckBox fx:id="checkCastrado" layoutX="246.0" layoutY="236.0" mnemonicParsing="false" text="Animal Castrado" />
 </AnchorPane>
