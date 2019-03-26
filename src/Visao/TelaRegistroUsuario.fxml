@@ -24,4 +24,5 @@
     <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
         <Menu mnemonicParsing="false" text="Home" />
     </MenuBar>
+   <Label layoutX="111.0" layoutY="219.0" text="Data de Nascimento:" />
 </AnchorPane>
