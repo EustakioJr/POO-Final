@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e540a03c-02aa-4406-99c3-a74a462fdd42" name="Default Changelist" comment="Adição da tela de registro de ONGs e Clinicas e atualização da tela de registro de Animais">
-      <change afterPath="$PROJECT_DIR$/src/Controle/ControleRegistroClinica.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controle/ControleRegistroOng.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Visao/TelaRegistroClinica.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Visao/TelaRegistroOng.fxml" afterDir="false" />
+    <list default="true" id="e540a03c-02aa-4406-99c3-a74a462fdd42" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controle/ControleRegistroAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controle/ControleRegistroAnimal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Visao/TelaRegistroAnimal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Visao/TelaRegistroAnimal.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Visao/TelaRegistroUsuario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Visao/TelaRegistroUsuario.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,10 +14,20 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Visao/TelaRegistroUsuario.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Visao/TelaRegistroClinica.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
+            <state relative-caret-position="221">
               <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
             </state>
           </provider>
@@ -50,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controle/ControleRegistroAnimal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+            <state relative-caret-position="56">
+              <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -116,13 +119,13 @@
         <option value="$PROJECT_DIR$/src/Controle/ControleInicio.java" />
         <option value="$PROJECT_DIR$/src/Visao/TelaRegistro.java" />
         <option value="$PROJECT_DIR$/src/Controle/ControleRegistroUsuario.java" />
-        <option value="$PROJECT_DIR$/src/Visao/TelaRegistroUsuario.fxml" />
         <option value="$PROJECT_DIR$/src/Controle/ControleRegistroOng.java" />
         <option value="$PROJECT_DIR$/src/Controle/ControleRegistroClinica.java" />
         <option value="$PROJECT_DIR$/src/Visao/TelaRegistroOng.fxml" />
         <option value="$PROJECT_DIR$/src/Visao/TelaRegistroClinica.fxml" />
         <option value="$PROJECT_DIR$/src/Visao/TelaRegistroAnimal.fxml" />
         <option value="$PROJECT_DIR$/src/Controle/ControleRegistroAnimal.java" />
+        <option value="$PROJECT_DIR$/src/Visao/TelaRegistroUsuario.fxml" />
       </list>
     </option>
   </component>
@@ -180,7 +183,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553626820923" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553627415031" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -273,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553607335851</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Adição da tela de registro de ONGs e Clinicas e atualização da tela de registro de Animais">
+      <created>1553626843426</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1553626843426</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -425,14 +435,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Visao/TelaRegistroUsuario.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controle/ControleRegistroUsuario.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -486,22 +488,6 @@
         <state relative-caret-position="-3570" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Visao/TelaRegistroOng.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Visao/TelaRegistroClinica.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Visao/TelaRegistroAnimal.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
@@ -510,13 +496,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Visao/TelaRegistroOng.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controle/ControleRegistroAnimal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+        <state relative-caret-position="56">
+          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Visao/TelaRegistroUsuario.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Visao/TelaRegistroClinica.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
         </state>
       </provider>
     </entry>

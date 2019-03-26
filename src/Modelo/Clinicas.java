@@ -1,5 +1,7 @@
 package Modelo;
 
+import java.util.Objects;
+
 public class Clinicas  {
 
     private final String ID;
@@ -8,14 +10,17 @@ public class Clinicas  {
     private String endereco;
     private String cnpj;
     private String descricao;
+    private String senha;
 
-    public Clinicas(String nome, String username, String endereco, String cnpj, String descricao) {
+    public Clinicas(String nome, String username, String endereco, String cnpj, String descricao, String senha) {
+
         ID = "Clinicas";
         this.nome = nome;
         this.username = username;
         this.endereco = endereco;
         this.cnpj = cnpj;
         this.descricao = descricao;
+        this.senha = senha;
     }
 
     @SuppressWarnings("WeakerAccess")
@@ -69,6 +74,28 @@ public class Clinicas  {
 
     public void setdescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Clinicas clinicas = (Clinicas) o;
+        return Objects.equals(username, clinicas.username) &&
+                Objects.equals(cnpj, clinicas.cnpj);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(username, cnpj);
     }
 
     @Override
