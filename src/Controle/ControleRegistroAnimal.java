@@ -1,12 +1,11 @@
 package Controle;
 
-
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 
 public class ControleRegistroAnimal {
@@ -33,18 +32,32 @@ public class ControleRegistroAnimal {
     private Menu menuHome;
 
     @FXML
-    private Menu menuPerfil;
+    private MenuItem botaoHome;
 
     @FXML
-    private Menu logout;
+    private MenuItem botaoPerfil;
 
+    @FXML
+    private MenuItem botaoLogout;
 
-
+    @FXML
     public void avisoConclusao(ActionEvent actionEvent) {
         labelAviso.setText("Animal registrado");
     }
 
-    public void nomePerfil(Event event) {
-        menuPerfil.setText("APAS");
+    @FXML
+    void irHome(ActionEvent event) {
+
     }
+
+    @FXML
+    void irPerfil(ActionEvent event) {
+
+    }
+
+    @FXML
+    void irTelaInicial(ActionEvent event) {
+
+    }
+
 }

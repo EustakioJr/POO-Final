@@ -15,12 +15,11 @@ public class ControleTelaInicial {
 
     @FXML
     void irTelaCadastro(ActionEvent event) {
-
+        Visao.App.trocaTela("cadastro");
     }
 
     @FXML
     void irTelaLogin(ActionEvent event) {
-        System.out.println("Apertou Login!");
         Visao.App.trocaTela("login");
     }
 

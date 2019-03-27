@@ -34,7 +34,15 @@ public class ControleRegistroOng {
     @FXML
     private TextArea campoDescricao;
 
+    @FXML
+    private Button botaoVoltar;
+
     public void registrar(ActionEvent actionEvent) {
         labelAviso.setText("Sucesso");
+    }
+
+    @FXML
+    void irCadastro(ActionEvent event) {
+        Visao.App.trocaTela("cadastro");
     }
 }

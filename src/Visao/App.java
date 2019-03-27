@@ -12,6 +12,10 @@ public class App extends Application {
 
     private static Scene telaInicio;
     private static Scene telaLogin;
+    private static Scene telaCadastro;
+    private static Scene telaRegistroClinica;
+    private static Scene telaRegistroOng;
+    private static Scene telaRegistroUsuario;
 
 
     @Override
@@ -26,6 +30,18 @@ public class App extends Application {
         Parent fxmlLogin = FXMLLoader.load(getClass().getResource("TelaLogin.fxml"));
         telaLogin = new Scene(fxmlLogin, 600, 400);
 
+        Parent fxmlCadastro = FXMLLoader.load(getClass().getResource("TelaCadastro.fxml"));
+        telaCadastro = new Scene(fxmlCadastro, 600, 400);
+
+        Parent fxmlRegistroClinica = FXMLLoader.load(getClass().getResource("TelaRegistroClinica.fxml"));
+        telaRegistroClinica = new Scene(fxmlRegistroClinica, 600, 400);
+
+        Parent fxmlRegistroOng = FXMLLoader.load(getClass().getResource("TelaRegistroOng.fxml"));
+        telaRegistroOng = new Scene(fxmlRegistroOng, 600, 400);
+
+        Parent fxmlRegistroUsuario = FXMLLoader.load(getClass().getResource("TelaRegistroUsuario.fxml"));
+        telaRegistroUsuario = new Scene(fxmlRegistroUsuario, 600, 400);
+
         PrimaryStage.setScene(telaInicio);
         PrimaryStage.show();
     }
@@ -38,6 +54,17 @@ public class App extends Application {
             case "login":
                 stage.setScene(telaLogin);
                 break;
+            case "cadastro":
+                stage.setScene(telaCadastro);
+                break;
+            case "registroClinica":
+                stage.setScene(telaRegistroClinica);
+                break;
+            case "registroOng":
+                stage.setScene(telaRegistroOng);
+                break;
+            case "registroUsuario":
+                stage.setScene(telaRegistroUsuario);
         }
     }
 

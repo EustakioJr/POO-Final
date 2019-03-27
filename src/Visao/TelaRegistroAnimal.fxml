@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
@@ -20,11 +21,11 @@
    <Label layoutX="191.0" layoutY="159.0" text="Idade:" />
    <Label layoutX="195.0" layoutY="198.0" text="ONG:" />
    <CheckBox fx:id="checkCastrado" layoutX="246.0" layoutY="236.0" mnemonicParsing="false" text="Animal Castrado" />
-    <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
-             AnchorPane.topAnchor="2.0">
-        <Menu fx:id="menuHome" mnemonicParsing="false" text="Home"/>
-        <Menu fx:id="menuPerfil" mnemonicParsing="false" onMenuValidation="#nomePerfil" text="Perfil"/>
-        <Menu mnemonicParsing="false" text="Help"/>
-        <Menu fx:id="logout" mnemonicParsing="false" text="Logout"/>
+    <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
+        <Menu fx:id="menuHome" mnemonicParsing="false" text="Menu">
+            <MenuItem fx:id="botaoHome" mnemonicParsing="false" onAction="#irHome" text="Home" />
+            <MenuItem fx:id="botaoPerfil" mnemonicParsing="false" onAction="#irPerfil" text="Perfil" />
+            <MenuItem fx:id="botaoLogout" mnemonicParsing="false" onAction="#irTelaInicial" text="Logout" />
+        </Menu>
     </MenuBar>
 </AnchorPane>

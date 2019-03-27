@@ -1,5 +1,6 @@
 package Controle;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
@@ -28,5 +29,18 @@ public class ControleRegistroClinica {
 
     @FXML
     private PasswordField campoSenha;
+
+    @FXML
+    private Button botaoVoltar;
+
+    @FXML
+    void criarCadastroClinica(ActionEvent event) {
+
+    }
+
+    @FXML
+    void irCadastro(ActionEvent event) {
+        Visao.App.trocaTela("cadastro");
+    }
 
 }

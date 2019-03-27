@@ -27,7 +27,6 @@ public class ControleTelaLogin {
 
     @FXML
     void irInicio(ActionEvent event) {
-        System.out.println("Clicou Voltar");
         Visao.App.trocaTela("inicio");
     }
 

@@ -32,8 +32,16 @@ public class ControleRegistroUsuario {
     private PasswordField senhaUsuario;
 
     @FXML
+    private Button botaoVoltar;
+
+    @FXML
     void registrar(ActionEvent event) {
         labelAviso.setText("Usuario registrado com Sucesso");
+    }
+
+    @FXML
+    void irCadastro(ActionEvent event) {
+        Visao.App.trocaTela("cadastro");
     }
 
 }
