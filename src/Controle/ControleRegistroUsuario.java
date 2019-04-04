@@ -28,7 +28,7 @@ public class ControleRegistroUsuario {
     private TextField campoCpf;
 
     @FXML
-    private TextField campoNasc;
+    private DatePicker campoNasc;
 
     @FXML
     private PasswordField campoSenha;
@@ -44,7 +44,7 @@ public class ControleRegistroUsuario {
     @FXML
     void irCadastro(ActionEvent event) {
         campoCpf.setText("");
-        campoNasc.setText("");
+        campoNasc.setValue(null);
         campoNome.setText("");
         campoSenha.setText("");
         campoUser.setText("");
@@ -59,16 +59,6 @@ public class ControleRegistroUsuario {
         tff.setMask("###.###.###-##");
         tff.setCaracteresValidos("0123456789");
         tff.setTf(campoCpf);
-        tff.formatter();
-    }
-
-    @FXML
-    void mkNascimento(KeyEvent event) {
-        TextFieldFormatter tff = new TextFieldFormatter();
-
-        tff.setMask("##/##/####");
-        tff.setCaracteresValidos("0123456789");
-        tff.setTf(campoNasc);
         tff.formatter();
     }
 
