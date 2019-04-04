@@ -21,6 +21,13 @@ public class App extends Application {
     private static Scene telaHomeClinica;
     private static Scene telaRegistroAnimal;
     private static Scene telaRegistroVet;
+    private static Scene telaListaOngUser;
+    private static Scene telaListaOngClinica;
+    private static Scene telaListaClinicaUser;
+    private static Scene telaListaClinicaOng;
+    private static Scene telaListaVet;
+    private static Scene telaListaAnimalUser;
+    private static Scene telaListaAnimalOng;
 
 
     @Override
@@ -73,6 +80,34 @@ public class App extends Application {
         Parent fxmlTelaRegistroVet = FXMLLoader.load(getClass().getResource("TelaRegistroVet.fxml"));
         telaRegistroVet = new Scene(fxmlTelaRegistroVet, 600, 400);
 
+        //Cria a tela de lista de ONGs para usuarios
+        Parent fxmlTelaListaOngUser = FXMLLoader.load(getClass().getResource("TelaListaOngUser.fxml"));
+        telaListaOngUser = new Scene(fxmlTelaListaOngUser, 600, 400);
+
+        //Cria a tela de lista de ONGs para clinicas
+        Parent fxmlTelaListaOngClinica = FXMLLoader.load(getClass().getResource("TelaListaOngClinica.fxml"));
+        telaListaOngClinica = new Scene(fxmlTelaListaOngClinica, 600, 400);
+
+        //Cria a tela de lista de Clinicas para usuarios
+        Parent fxmlTelaListaClinicaUser = FXMLLoader.load(getClass().getResource("TelaListaClinicaUser.fxml"));
+        telaListaClinicaUser = new Scene(fxmlTelaListaClinicaUser, 600, 400);
+
+        //Cria a tela de lista de Clinicas para ONGs
+        Parent fxmlTelaListaClinicaOng = FXMLLoader.load(getClass().getResource("TelaListaClinicaOng.fxml"));
+        telaListaClinicaOng = new Scene(fxmlTelaListaClinicaOng, 600, 400);
+
+        //Cria a tela de lista de Veterinarios para as clinicas
+        Parent fxmlTelaListaVet = FXMLLoader.load(getClass().getResource("TelaListaVet.fxml"));
+        telaListaVet = new Scene(fxmlTelaListaVet, 600, 400);
+
+        //Cria a tela de lista de Animais para usuarios
+        Parent fxmlTelaListaAnimalUser = FXMLLoader.load(getClass().getResource("TelaListaAnimaisUser.fxml"));
+        telaListaAnimalUser = new Scene(fxmlTelaListaAnimalUser, 600, 400);
+
+        //Cria a tela de lista de animais para ongs
+        Parent fxmlTelaListaAnimalOng = FXMLLoader.load(getClass().getResource("TelaListaAnimaisOng.fxml"));
+        telaListaAnimalOng = new Scene(fxmlTelaListaAnimalOng, 600, 400);
+
         //Seta a tela que sera mostrada ao iniciar o aplicativo
         PrimaryStage.setScene(telaInicio);
         //Inicia a tela no aplicativo
@@ -114,7 +149,28 @@ public class App extends Application {
                 break;
             case "registroVet":
                 stage.setScene(telaRegistroVet);
-
+                break;
+            case "listaOngUser":
+                stage.setScene(telaListaOngUser);
+                break;
+            case "listaOngClinica":
+                stage.setScene(telaListaOngClinica);
+                break;
+            case "listaClinicaUser":
+                stage.setScene(telaListaClinicaUser);
+                break;
+            case "listaClinicaOng":
+                stage.setScene(telaListaClinicaOng);
+                break;
+            case "listaVet":
+                stage.setScene(telaListaVet);
+                break;
+            case "listaAnimalUser":
+                stage.setScene(telaListaAnimalUser);
+                break;
+            case "listaAnimalOng":
+                stage.setScene(telaListaAnimalOng);
+                break;
         }
     }
 

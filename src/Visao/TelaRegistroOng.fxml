@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
@@ -17,12 +16,12 @@
     <TextField fx:id="campoCNPJ" layoutX="226.0" layoutY="129.0" />
     <TextField fx:id="campoEndereco" layoutX="226.0" layoutY="163.0" />
     <PasswordField fx:id="campoSenha" layoutX="226.0" layoutY="200.0" />
-    <TextArea fx:id="campoDescricao" layoutX="226.0" layoutY="234.0" prefHeight="71.0" prefWidth="149.0" wrapText="true" />
     <Label layoutX="139.0" layoutY="62.0" text="Nome da ONG:" />
     <Label layoutX="152.0" layoutY="98.0" text="Username:" />
     <Label layoutX="165.0" layoutY="133.0" text="CNPJ:" />
     <Label layoutX="154.0" layoutY="167.0" text="Endereço:" />
     <Label layoutX="163.0" layoutY="204.0" text="Senha:" />
-    <Label layoutX="115.0" layoutY="261.0" text="Descrição da ONG:" />
+    <Label layoutX="158.0" layoutY="244.0" text="Telefone:" />
    <Button fx:id="botaoVoltar" layoutX="14.0" layoutY="50.0" mnemonicParsing="false" onAction="#irCadastro" text="Voltar" />
+   <TextField fx:id="campoTelefone" layoutX="226.0" layoutY="240.0" />
 </AnchorPane>

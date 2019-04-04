@@ -40,11 +40,21 @@ public class ControleRegistroVet {
 
     @FXML
     void irHome(ActionEvent event) {
+        textCrvm.setText("");
+        textEmail.setText("");
+        textNome.setText("");
+        textTelefone.setText("");
+        labelAviso.setText("");
         Visao.App.trocaTela("homeClinica");
     }
 
     @FXML
     void irInicio(ActionEvent event) {
+        textCrvm.setText("");
+        textEmail.setText("");
+        textNome.setText("");
+        textTelefone.setText("");
+        labelAviso.setText("");
         Visao.App.trocaTela("inicio");
     }
 

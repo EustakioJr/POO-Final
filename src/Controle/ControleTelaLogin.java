@@ -31,6 +31,9 @@ public class ControleTelaLogin {
 
     @FXML
     void irInicio(ActionEvent event) {
+        campoSenha.setText("");
+        campoUser.setText("");
+        campoTipo.setValue(null);
         Visao.App.trocaTela("inicio");
     }
 
@@ -38,12 +41,21 @@ public class ControleTelaLogin {
     void login(ActionEvent event) {
         switch (campoTipo.getValue()){
             case ONG:
+                campoSenha.setText("");
+                campoUser.setText("");
+                campoTipo.setValue(null);
                 Visao.App.trocaTela("homeOng");
                 break;
             case CLINICA:
+                campoSenha.setText("");
+                campoUser.setText("");
+                campoTipo.setValue(null);
                 Visao.App.trocaTela("homeClinica");
                 break;
             case USUARIO:
+                campoSenha.setText("");
+                campoUser.setText("");
+                campoTipo.setValue(null);
                 Visao.App.trocaTela("homeUsuario");
         }
     }

@@ -19,7 +19,7 @@ public class ControleRegistroClinica {
     private TextField campoCNPJ;
 
     @FXML
-    private TextArea campoDescricao;
+    private TextField campoTelefone;
 
     @FXML
     private Button botaoRegistro;
@@ -40,6 +40,13 @@ public class ControleRegistroClinica {
 
     @FXML
     void irCadastro(ActionEvent event) {
+        campoCNPJ.setText("");
+        campoTelefone.setText("");
+        campoEndereco.setText("");
+        campoNome.setText("");
+        campoSenha.setText("");
+        campoUser.setText("");
+        labelAviso.setText("");
         Visao.App.trocaTela("cadastro");
     }
 

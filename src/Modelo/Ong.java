@@ -10,15 +10,15 @@ public class Ong {
     private String cnpj;
     private String endereco;
     private String senha;
-    private String descricao;
+    private String telefone;
 
-    public Ong(String nomeOng, String username, String cnpj, String endereco, String senha, String descricao) {
+    public Ong(String nomeOng, String username, String cnpj, String endereco, String senha, String telefone) {
         this.nomeOng = nomeOng;
         this.username = username;
         this.cnpj = cnpj;
         this.endereco = endereco;
         this.senha = senha;
-        this.descricao = descricao;
+        this.telefone = telefone;
         ID = ++cont;
     }
 
@@ -62,12 +62,12 @@ public class Ong {
         this.senha = senha;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public String getTelefone() {
+        return telefone;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 
     @Override

@@ -32,7 +32,7 @@ public class ControleRegistroOng {
     private PasswordField campoSenha;
 
     @FXML
-    private TextArea campoDescricao;
+    private TextField campoTelefone;
 
     @FXML
     private Button botaoVoltar;
@@ -43,6 +43,13 @@ public class ControleRegistroOng {
 
     @FXML
     void irCadastro(ActionEvent event) {
+        campoCNPJ.setText("");
+        campoTelefone.setText("");
+        campoEndereco.setText("");
+        campoNome.setText("");
+        campoSenha.setText("");
+        campoUser.setText("");
+        labelAviso.setText("");
         Visao.App.trocaTela("cadastro");
     }
 }

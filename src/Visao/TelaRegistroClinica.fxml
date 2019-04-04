@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
@@ -14,15 +13,15 @@
     <TextField fx:id="campoUser" layoutX="226.0" layoutY="78.0" />
     <TextField fx:id="campoEndereco" layoutX="226.0" layoutY="147.0" />
     <TextField fx:id="campoCNPJ" layoutX="226.0" layoutY="184.0" />
-    <TextArea fx:id="campoDescricao" layoutX="226.0" layoutY="219.0" prefHeight="88.0" prefWidth="149.0" />
     <Button fx:id="botaoRegistro" layoutX="260.0" layoutY="317.0" mnemonicParsing="false" onAction="#criarCadastroClinica" text="Registrar-se" />
     <Label fx:id="labelAviso" alignment="CENTER" layoutX="139.0" layoutY="357.0" prefHeight="17.0" prefWidth="323.0" />
     <Label layoutX="174.0" layoutY="47.0" text="Nome:" />
     <Label layoutX="165.0" layoutY="82.0" text="Username:" />
     <Label layoutX="177.0" layoutY="188.0" text="CNPJ:" />
     <Label layoutX="166.0" layoutY="151.0" text="Endereço:" />
-    <Label layoutX="166.0" layoutY="239.0" text="Descrição:" />
+    <Label layoutX="168.0" layoutY="231.0" text="Telefone:" />
    <PasswordField fx:id="campoSenha" layoutX="226.0" layoutY="113.0" />
    <Label layoutX="175.0" layoutY="117.0" text="Senha:" />
    <Button fx:id="botaoVoltar" layoutX="27.0" layoutY="43.0" mnemonicParsing="false" onAction="#irCadastro" text="Voltar" />
+   <TextField fx:id="campoTelefone" layoutX="226.0" layoutY="227.0" />
 </AnchorPane>

@@ -1,6 +1,5 @@
 package Modelo;
 
-import java.time.LocalDate;
 import java.util.Objects;
 
 public class Usuario {
@@ -9,10 +8,10 @@ public class Usuario {
     private String nome;
     private String username;
     private String cpf;
-    private LocalDate nascimento;
+    private String nascimento;
     private String senha;
 
-    public Usuario(String nome, String username, String cpf, LocalDate nascimento, String senha) {
+    public Usuario(String nome, String username, String cpf, String nascimento, String senha) {
         this.nome = nome;
         this.username = username;
         this.cpf = cpf;
@@ -45,11 +44,11 @@ public class Usuario {
         this.cpf = cpf;
     }
 
-    public LocalDate getNascimento() {
+    public String getNascimento() {
         return nascimento;
     }
 
-    public void setNascimento(LocalDate nascimento) {
+    public void setNascimento(String nascimento) {
         this.nascimento = nascimento;
     }
 

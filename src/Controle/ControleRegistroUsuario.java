@@ -17,19 +17,19 @@ public class ControleRegistroUsuario {
     private Label labelAviso;
 
     @FXML
-    private TextField nomeUsuario;
+    private TextField campoNome;
 
     @FXML
-    private TextField userUsuario;
+    private TextField campoUser;
 
     @FXML
-    private TextField cpfUsuario;
+    private TextField campoCpf;
 
     @FXML
-    private DatePicker nascUsuario;
+    private TextField campoNasc;
 
     @FXML
-    private PasswordField senhaUsuario;
+    private PasswordField campoSenha;
 
     @FXML
     private Button botaoVoltar;
@@ -41,6 +41,12 @@ public class ControleRegistroUsuario {
 
     @FXML
     void irCadastro(ActionEvent event) {
+        campoCpf.setText("");
+        campoNasc.setText("");
+        campoNome.setText("");
+        campoSenha.setText("");
+        campoUser.setText("");
+        labelAviso.setText("");
         Visao.App.trocaTela("cadastro");
     }
 

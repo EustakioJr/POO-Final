@@ -27,6 +27,9 @@ public class ControleTelaHomeClinica {
     private Button botaoAdicionaVet;
 
     @FXML
+    private Button botaoListaVet;
+
+    @FXML
     void irAlterar(ActionEvent event) {
 
     }
@@ -47,5 +50,12 @@ public class ControleTelaHomeClinica {
     }
 
     public void irListaOng(ActionEvent actionEvent) {
+        Visao.App.trocaTela("listaOngClinica");
     }
+
+    @FXML
+    void irListaVet(ActionEvent event) {
+        Visao.App.trocaTela("listaVet");
+    }
+
 }

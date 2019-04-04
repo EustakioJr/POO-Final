@@ -1,5 +1,6 @@
 package Controle;
 
+import javafx.beans.property.BooleanProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
@@ -14,16 +15,16 @@ public class ControleRegistroAnimal {
     private Label labelAviso;
 
     @FXML
-    private TextField textNome;
+    private TextField Nome;
 
     @FXML
-    private TextField textEspecie;
+    private TextField Especie;
 
     @FXML
-    private TextField textIdade;
+    private TextField Idade;
 
     @FXML
-    private TextField textOng;
+    private TextField Ong;
 
     @FXML
     private CheckBox checkCastrado;
@@ -47,17 +48,23 @@ public class ControleRegistroAnimal {
 
     @FXML
     void irHome(ActionEvent event) {
-
+        Especie.setText("");
+        Idade.setText("");
+        Ong.setText("");
+        Nome.setText("");
+        checkCastrado.setSelected(false);
+        Visao.App.trocaTela("homeOng");
     }
 
     @FXML
-    void irPerfil(ActionEvent event) {
-
-    }
-
-    @FXML
-    void irTelaInicial(ActionEvent event) {
-
+    void logout(ActionEvent event) {
+        Especie.setText("");
+        Idade.setText("");
+        Ong.setText("");
+        Nome.setText("");
+        checkCastrado.setSelected(false);
+        labelAviso.setText("");
+        Visao.App.trocaTela("inicio");
     }
 
 }

@@ -9,27 +9,27 @@ public class Clinicas  {
     private String username;
     private String endereco;
     private String cnpj;
-    private String descricao;
+    private String telefone;
     private String senha;
     private String horarioAtendimento;
 
-    public Clinicas(String nome, String username, String endereco, String cnpj, String descricao, String senha, String horarioAtendimento) {
+    public Clinicas(String nome, String username, String endereco, String cnpj, String telefone, String senha, String horarioAtendimento) {
         this.horarioAtendimento = horarioAtendimento;
         this.nome = nome;
         this.username = username;
         this.endereco = endereco;
         this.cnpj = cnpj;
-        this.descricao = descricao;
+        this.telefone = telefone;
         this.senha = senha;
         ID = ++cont;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public String getTelefone() {
+        return telefone;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 
     public String getNome() {
@@ -62,14 +62,6 @@ public class Clinicas  {
 
     public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
-    }
-
-    public String getdescricao() {
-        return descricao;
-    }
-
-    public void setdescricao(String descricao) {
-        this.descricao = descricao;
     }
 
     public String getSenha() {

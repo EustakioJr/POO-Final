@@ -45,12 +45,12 @@ public class ControleTelaHomeOng {
 
     @FXML
     void irListaAnimal(ActionEvent event) {
-
+        Visao.App.trocaTela("listaAnimalOng");
     }
 
     @FXML
     void irListaClinica(ActionEvent event) {
-
+        Visao.App.trocaTela("listaClinicaOng");
     }
 
     @FXML
