@@ -4,7 +4,6 @@ import java.util.Objects;
 
 public class Clinicas  {
 
-    private final String ID;
     private String nome;
     private String username;
     private String endereco;
@@ -15,18 +14,12 @@ public class Clinicas  {
 
     public Clinicas(String nome, String username, String endereco, String cnpj, String descricao, String senha, String horarioAtendimento) {
         this.horarioAtendimento = horarioAtendimento;
-        ID = "Clinicas";
         this.nome = nome;
         this.username = username;
         this.endereco = endereco;
         this.cnpj = cnpj;
         this.descricao = descricao;
         this.senha = senha;
-    }
-
-    @SuppressWarnings("WeakerAccess")
-    public String getID() {
-        return ID;
     }
 
     public String getDescricao() {
@@ -106,8 +99,4 @@ public class Clinicas  {
         return Objects.hash(username, cnpj);
     }
 
-    @Override
-    public String toString() {
-        return getID();
-    }
 }

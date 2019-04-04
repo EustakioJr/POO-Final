@@ -3,7 +3,6 @@ package Modelo;
 import java.util.Objects;
 
 public class Ong {
-    private final String ID;
     private String nomeOng;
     private String username;
     private String cnpj;
@@ -12,18 +11,12 @@ public class Ong {
     private String descricao;
 
     public Ong(String nomeOng, String username, String cnpj, String endereco, String senha, String descricao) {
-        ID = "ONG";
         this.nomeOng = nomeOng;
         this.username = username;
         this.cnpj = cnpj;
         this.endereco = endereco;
         this.senha = senha;
         this.descricao = descricao;
-    }
-
-    @SuppressWarnings("WeakerAccess")
-    public String getID() {
-        return ID;
     }
 
     public String getNomeOng() {
@@ -88,8 +81,4 @@ public class Ong {
         return Objects.hash(username, cnpj);
     }
 
-    @Override
-    public String toString() {
-        return getID();
-    }
 }

@@ -8,12 +8,14 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
+import Enum.TipoCadastro;
+
 public class ControleTelaLogin {
     @FXML
     private Button botaoLogin;
 
     @FXML
-    private ChoiceBox<?> campoTipo;
+    private ChoiceBox<TipoCadastro> campoTipo;
 
     @FXML
     private PasswordField campoSenha;
@@ -34,8 +36,23 @@ public class ControleTelaLogin {
 
     @FXML
     void login(ActionEvent event) {
-        Visao.App.trocaTela("homeOng");
+        switch (campoTipo.getValue()){
+            case ONG:
+                Visao.App.trocaTela("homeOng");
+                break;
+            case CLINICA:
+                Visao.App.trocaTela("homeClinica");
+                break;
+            case USUARIO:
+                Visao.App.trocaTela("homeUsuario");
+        }
     }
+
+    public void initialize() {
+        campoTipo.getItems().addAll(TipoCadastro.values());
+
+    }
+
 
 }
 

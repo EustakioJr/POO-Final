@@ -20,6 +20,7 @@ public class App extends Application {
     private static Scene telaHomeOng;
     private static Scene telaHomeClinica;
     private static Scene telaRegistroAnimal;
+    private static Scene telaRegistroVet;
 
 
     @Override
@@ -61,12 +62,16 @@ public class App extends Application {
         telaHomeOng = new Scene(fxmlTelaHomeOng, 600, 400);
 
         //Cria a tela home mostrada após o login de usuario Clinica
-//        Parent fxmlTelaHomeClinica = FXMLLoader.load(getClass().getResource("TelaHomeClinica.fxml"));
-//        telaHomeClinica = new Scene(fxmlTelaHomeClinica, 600, 400);
+        Parent fxmlTelaHomeClinica = FXMLLoader.load(getClass().getResource("TelaHomeClinica.fxml"));
+        telaHomeClinica = new Scene(fxmlTelaHomeClinica, 600, 400);
 
         //Cria a tela de registro de animal
         Parent fxmlTelaRegistroAnimal = FXMLLoader.load(getClass().getResource("TelaRegistroAnimal.fxml"));
         telaRegistroAnimal = new Scene(fxmlTelaRegistroAnimal, 600, 400);
+
+        //Cria a tela de registro de veterinarios
+        Parent fxmlTelaRegistroVet = FXMLLoader.load(getClass().getResource("TelaRegistroVet.fxml"));
+        telaRegistroVet = new Scene(fxmlTelaRegistroVet, 600, 400);
 
         //Seta a tela que sera mostrada ao iniciar o aplicativo
         PrimaryStage.setScene(telaInicio);
@@ -101,11 +106,15 @@ public class App extends Application {
             case "homeOng":
                 stage.setScene(telaHomeOng);
                 break;
-//            case "homeClinica":
-//                stage.setScene(telaHomeClinica);
-//                break;
+            case "homeClinica":
+                stage.setScene(telaHomeClinica);
+                break;
             case "registroAnimal":
                 stage.setScene(telaRegistroAnimal);
+                break;
+            case "registroVet":
+                stage.setScene(telaRegistroVet);
+
         }
     }
 

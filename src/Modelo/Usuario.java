@@ -4,7 +4,6 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 public class Usuario {
-    private final String ID;
     private String nome;
     private String username;
     private String cpf;
@@ -12,17 +11,11 @@ public class Usuario {
     private String senha;
 
     public Usuario(String nome, String username, String cpf, LocalDate nascimento, String senha) {
-        ID = "Usuario";
         this.nome = nome;
         this.username = username;
         this.cpf = cpf;
         this.nascimento = nascimento;
         this.senha = senha;
-    }
-
-    @SuppressWarnings("WeakerAccess")
-    public String getID() {
-        return ID;
     }
 
     public String getNome() {
@@ -79,8 +72,4 @@ public class Usuario {
         return Objects.hash(username, cpf);
     }
 
-    @Override
-    public String toString() {
-        return getID();
-    }
 }

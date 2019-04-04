@@ -24,7 +24,6 @@
     <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
         <Menu fx:id="menuHome" mnemonicParsing="false" text="Menu">
             <MenuItem fx:id="botaoHome" mnemonicParsing="false" onAction="#irHome" text="Home" />
-            <MenuItem fx:id="botaoPerfil" mnemonicParsing="false" onAction="#irPerfil" text="Perfil" />
             <MenuItem fx:id="botaoLogout" mnemonicParsing="false" onAction="#irTelaInicial" text="Logout" />
         </Menu>
     </MenuBar>
