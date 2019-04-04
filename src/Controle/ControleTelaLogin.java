@@ -9,6 +9,8 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class ControleTelaLogin {
+    @FXML
+    private Button botaoLogin;
 
     @FXML
     private ChoiceBox<?> campoTipo;
@@ -28,6 +30,11 @@ public class ControleTelaLogin {
     @FXML
     void irInicio(ActionEvent event) {
         Visao.App.trocaTela("inicio");
+    }
+
+    @FXML
+    void login(ActionEvent event) {
+        Visao.App.trocaTela("homeOng");
     }
 
 }

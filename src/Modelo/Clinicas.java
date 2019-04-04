@@ -11,9 +11,10 @@ public class Clinicas  {
     private String cnpj;
     private String descricao;
     private String senha;
+    private String horarioAtendimento;
 
-    public Clinicas(String nome, String username, String endereco, String cnpj, String descricao, String senha) {
-
+    public Clinicas(String nome, String username, String endereco, String cnpj, String descricao, String senha, String horarioAtendimento) {
+        this.horarioAtendimento = horarioAtendimento;
         ID = "Clinicas";
         this.nome = nome;
         this.username = username;
@@ -84,6 +85,13 @@ public class Clinicas  {
         this.senha = senha;
     }
 
+    public String getHorarioAtendimento() {
+        return horarioAtendimento;
+    }
+
+    public void setHorarioAtendimento(String horarioAtendimento) {
+        this.horarioAtendimento = horarioAtendimento;
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
