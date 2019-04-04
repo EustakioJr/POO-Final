@@ -1,7 +1,8 @@
 package Modelo;
 
 public class Veterinarios {
-
+    private static int cont;
+    private final int ID;
     private String nome;
     private int telefone;
     private String crvm;
@@ -12,6 +13,7 @@ public class Veterinarios {
         this.telefone = telefone;
         this.crvm = crvm;
         this.email = email;
+        ID = ++cont;
     }
 
     public String getNome() {
@@ -46,4 +48,7 @@ public class Veterinarios {
         this.email = email;
     }
 
+    public int getID() {
+        return ID;
+    }
 }

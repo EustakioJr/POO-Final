@@ -3,7 +3,8 @@ package Modelo;
 import java.util.Objects;
 
 public class Clinicas  {
-
+    private static int cont;
+    private final int ID;
     private String nome;
     private String username;
     private String endereco;
@@ -20,6 +21,7 @@ public class Clinicas  {
         this.cnpj = cnpj;
         this.descricao = descricao;
         this.senha = senha;
+        ID = ++cont;
     }
 
     public String getDescricao() {
@@ -99,4 +101,7 @@ public class Clinicas  {
         return Objects.hash(username, cnpj);
     }
 
+    public int getID() {
+        return ID;
+    }
 }
