@@ -12,7 +12,7 @@
    <Label fx:id="labelAviso" alignment="CENTER" layoutX="183.0" layoutY="312.0" prefHeight="25.0" prefWidth="235.0" textAlignment="CENTER" />
    <TextField fx:id="campoNome" layoutX="226.0" layoutY="58.0" />
    <TextField fx:id="campoUser" layoutX="226.0" layoutY="98.0" />
-   <TextField fx:id="campoCpf" layoutX="226.0" layoutY="138.0" />
+   <TextField fx:id="campoCpf" layoutX="226.0" layoutY="138.0" onKeyReleased="#mkCpf" />
    <Label layoutX="165.0" layoutY="62.0" text="Nome:" />
    <Label layoutX="155.0" layoutY="102.0" text="Username:" />
    <Label layoutX="172.0" layoutY="142.0" text="CPF:" />
@@ -21,5 +21,5 @@
     <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0" />
    <Label layoutX="111.0" layoutY="219.0" text="Data de Nascimento:" />
    <Button fx:id="botaoVoltar" layoutX="14.0" layoutY="46.0" mnemonicParsing="false" onAction="#irCadastro" text="Voltar" />
-   <TextField fx:id="campoNasc" layoutX="226.0" layoutY="215.0" />
+   <TextField fx:id="campoNasc" layoutX="226.0" layoutY="215.0" onKeyReleased="#mkNascimento" />
 </AnchorPane>

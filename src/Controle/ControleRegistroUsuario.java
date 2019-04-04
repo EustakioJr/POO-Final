@@ -7,6 +7,8 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
+import util.TextFieldFormatter;
 
 public class ControleRegistroUsuario {
 
@@ -48,6 +50,26 @@ public class ControleRegistroUsuario {
         campoUser.setText("");
         labelAviso.setText("");
         Visao.App.trocaTela("cadastro");
+    }
+
+    @FXML
+    void mkCpf(KeyEvent event) {
+        TextFieldFormatter tff = new TextFieldFormatter();
+
+        tff.setMask("###.###.###-##");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(campoCpf);
+        tff.formatter();
+    }
+
+    @FXML
+    void mkNascimento(KeyEvent event) {
+        TextFieldFormatter tff = new TextFieldFormatter();
+
+        tff.setMask("##/##/####");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(campoNasc);
+        tff.formatter();
     }
 
 }

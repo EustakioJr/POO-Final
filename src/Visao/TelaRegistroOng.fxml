@@ -13,7 +13,7 @@
     <Label fx:id="labelAviso" alignment="CENTER" contentDisplay="CENTER" layoutX="154.0" layoutY="356.0" prefHeight="17.0" prefWidth="292.0" textAlignment="JUSTIFY" textOverrun="CENTER_ELLIPSIS" />
     <TextField fx:id="campoNome" layoutX="226.0" layoutY="58.0" />
     <TextField fx:id="campoUser" layoutX="226.0" layoutY="94.0" />
-    <TextField fx:id="campoCNPJ" layoutX="226.0" layoutY="129.0" />
+    <TextField fx:id="campoCNPJ" layoutX="226.0" layoutY="129.0" onKeyReleased="#mkCNPJ" />
     <TextField fx:id="campoEndereco" layoutX="226.0" layoutY="163.0" />
     <PasswordField fx:id="campoSenha" layoutX="226.0" layoutY="200.0" />
     <Label layoutX="139.0" layoutY="62.0" text="Nome da ONG:" />
@@ -23,5 +23,5 @@
     <Label layoutX="163.0" layoutY="204.0" text="Senha:" />
     <Label layoutX="158.0" layoutY="244.0" text="Telefone:" />
    <Button fx:id="botaoVoltar" layoutX="14.0" layoutY="50.0" mnemonicParsing="false" onAction="#irCadastro" text="Voltar" />
-   <TextField fx:id="campoTelefone" layoutX="226.0" layoutY="240.0" />
+   <TextField fx:id="campoTelefone" layoutX="226.0" layoutY="240.0" onKeyReleased="#mkTelefone" />
 </AnchorPane>
