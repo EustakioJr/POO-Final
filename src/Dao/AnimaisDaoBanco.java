@@ -31,7 +31,7 @@ public class AnimaisDaoBanco implements AnimaisDao {
 
             while (resultSet.next())
             {
-                int id = resultSet.getInt("id");
+                String id = resultSet.getString("id");
                 String nome = resultSet.getString("nome");
                 String especie = resultSet.getString("especie");
                 String ongPertencente = resultSet.getString("ongpertecente");
@@ -51,7 +51,7 @@ public class AnimaisDaoBanco implements AnimaisDao {
                     "INSERT INTO animal(id, nome, especie, ongpertencente, idade, castrado) VALUES(?, ?, ?, ?, ?, ?, ?, ?);"
             );
 
-            statement.setInt(1, animal.getID());
+            statement.setString(1, animal.getId());
             statement.setString(2, animal.getNome());
             statement.setString(3, animal.getEspecie());
             statement.setString(4, animal.getOngPertencente());
@@ -63,13 +63,13 @@ public class AnimaisDaoBanco implements AnimaisDao {
     }
 
     @Override
-    public Animais buscarPorId(int id) throws SQLException, ClassNotFoundException {
+    public Animais buscarPorId(String id) throws SQLException, ClassNotFoundException {
         try(Connection connection = factory.getConnection()){
             PreparedStatement statement = connection.prepareStatement(
                     "SELECT * FROM ANIMAL WHERE ID = ?"
             );
 
-            statement.setInt(1, id);
+            statement.setString(1, id);
 
             ResultSet resultSet = statement.executeQuery();
 
@@ -92,7 +92,7 @@ public class AnimaisDaoBanco implements AnimaisDao {
                     "DELETE FROM ANIMAL WHERE ID = ?"
             );
 
-            statement.setInt(1, animal.getID());
+            statement.setString(1, animal.getId());
 
             return statement.executeUpdate() > 0;
         }
@@ -112,7 +112,7 @@ public class AnimaisDaoBanco implements AnimaisDao {
             statement.setString(3, animal.getOngPertencente());
             statement.setString(4, animal.getidade());
             statement.setBoolean(5, animal.isCastrado());
-            statement.setInt(6, animal.getID());
+            statement.setString(6, animal.getId());
 
             return statement.executeUpdate() > 0;
         }

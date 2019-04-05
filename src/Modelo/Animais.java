@@ -8,7 +8,7 @@ package Modelo;
 
 
 public class Animais {
-    private int id;
+    private String id;
     private String nome;
     private String especie;
     private String ongPertencente;
@@ -20,7 +20,7 @@ public class Animais {
      */
 
 
-    public Animais(int id, String nome, String especie, String ongPertencente, String idade, boolean castrado) {
+    public Animais(String id, String nome, String especie, String ongPertencente, String idade, boolean castrado) {
         this.id = id;
         this.nome = nome;
         this.especie = especie;
@@ -75,7 +75,11 @@ public class Animais {
         this.castrado = castrado;
     }
 
-    public int getID() {
+    public String getId() {
         return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

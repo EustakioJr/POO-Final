@@ -33,7 +33,7 @@ public interface AnimaisDao {
      * @throws SQLException
      * @throws ClassNotFoundException
      */
-    public Animais buscarPorId(int id) throws SQLException, ClassNotFoundException;
+    public Animais buscarPorId(String id) throws SQLException, ClassNotFoundException;
 
     /**
      * <b>Função de deletar Animais.</b>

@@ -63,7 +63,6 @@ public class ControleRegistroUsuario {
             }
         }
 
-        labelAviso.setText("Usuario registrado com Sucesso");
     }
 
     @FXML

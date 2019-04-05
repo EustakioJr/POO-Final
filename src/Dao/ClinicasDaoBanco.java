@@ -32,12 +32,12 @@ public class ClinicasDaoBanco implements ClinicaDao{
 
             while (resultSet.next())
             {
-                String nome = resultSet.getString("Razão");
-                String username = resultSet.getString("User");
-                String endereco = resultSet.getString("Endereço");
-                String cnpj = resultSet.getString("CNPJ");
-                String telefone = resultSet.getString("Telefone");
-                String senha = resultSet.getString("Senha");
+                String nome = resultSet.getString("razao");
+                String username = resultSet.getString("username");
+                String endereco = resultSet.getString("endereco");
+                String cnpj = resultSet.getString("cnpj");
+                String telefone = resultSet.getString("telefone");
+                String senha = resultSet.getString("senha");
 
                 clinicas.add(new Clinicas(nome, username, endereco, cnpj, telefone, senha));
             }

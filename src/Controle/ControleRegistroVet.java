@@ -1,5 +1,7 @@
 package Controle;
 
+import Dao.VeterinariosDaoBanco;
+import Modelo.Veterinarios;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -9,7 +11,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import util.TextFieldFormatter;
 
+import java.io.IOException;
+import java.sql.SQLException;
+
 public class ControleRegistroVet {
+
+    VeterinariosDaoBanco daoVeterinario = new VeterinariosDaoBanco();
 
     @FXML
     private Label labelAviso;
@@ -37,6 +44,24 @@ public class ControleRegistroVet {
 
     @FXML
     void avisoConclusao(ActionEvent event) {
+
+        if (textNome.getText().isEmpty() || textTelefone.getText().isEmpty() || textCrvm.getText().isEmpty() || textEmail.getText().isEmpty()){
+            labelAviso.setText("Há campos vazios!");
+        }else{
+            try {
+                if (daoVeterinario.salvar(new Veterinarios(textNome.getText(), textTelefone.getText(), textCrvm.getText(), textEmail.getText()))){
+                    labelAviso.setText("Animal registrado");
+                }else labelAviso.setText("ERRO! Animal não registrado");
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+
         labelAviso.setText("Veterinario registrado com sucesso");
     }
 

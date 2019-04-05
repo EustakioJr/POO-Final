@@ -7,11 +7,9 @@ package Modelo;
  */
 
 
-public class Veterinarios {
-    private static int cont;
-    private final int ID;
+public class Veterinarios{
     private String nome;
-    private int telefone;
+    private String telefone;
     private String crvm;
     private String email;
 
@@ -20,12 +18,11 @@ public class Veterinarios {
      */
 
 
-    public Veterinarios(String nome, int telefone, String crvm, String email) {
+    public Veterinarios(String nome, String telefone, String crvm, String email) {
         this.nome = nome;
         this.telefone = telefone;
         this.crvm = crvm;
         this.email = email;
-        ID = ++cont;
     }
 
 
@@ -43,11 +40,11 @@ public class Veterinarios {
         this.nome = nome;
     }
 
-    public int getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(int telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
@@ -65,9 +62,5 @@ public class Veterinarios {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public int getID() {
-        return ID;
     }
 }

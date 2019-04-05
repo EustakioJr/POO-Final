@@ -22,6 +22,9 @@ public class ControleRegistroAnimal {
     private Label labelAviso;
 
     @FXML
+    private TextField Id;
+
+    @FXML
     private TextField Nome;
 
     @FXML
