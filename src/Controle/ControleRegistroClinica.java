@@ -50,10 +50,6 @@ public class ControleRegistroClinica {
             labelAviso.setText("Há campos vazios!");
         }else{
             try {
-
-
-
-
                 if (daoOng.salvar(new Clinicas(campoNome.getText(),
                         campoUser.getText(),
                         campoEndereco.getText(),
