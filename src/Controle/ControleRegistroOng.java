@@ -54,7 +54,7 @@ public class ControleRegistroOng {
                                 campoEndereco.getText(),
                                 campoSenha.getText(),
                                 campoTelefone.getText()))){
-                    Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
+                    Alert alerta = new Alert(Alert.AlertType.INFORMATION);
                     alerta.setTitle("Cadastrado com Sucesso!");
                     alerta.setHeaderText("A sua ONG foi cadastrada!");
                     alerta.show();

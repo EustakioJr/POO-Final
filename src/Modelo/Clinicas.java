@@ -3,25 +3,20 @@ package Modelo;
 import java.util.Objects;
 
 public class Clinicas  {
-    private static int cont;
-    private final int ID;
     private String nome;
     private String username;
     private String endereco;
     private String cnpj;
     private String telefone;
     private String senha;
-    private String horarioAtendimento;
 
-    public Clinicas(String nome, String username, String endereco, String cnpj, String telefone, String senha, String horarioAtendimento) {
-        this.horarioAtendimento = horarioAtendimento;
+    public Clinicas(String nome, String username, String endereco, String cnpj, String telefone, String senha) {
         this.nome = nome;
         this.username = username;
         this.endereco = endereco;
         this.cnpj = cnpj;
         this.telefone = telefone;
         this.senha = senha;
-        ID = ++cont;
     }
 
     public String getTelefone() {
@@ -72,13 +67,6 @@ public class Clinicas  {
         this.senha = senha;
     }
 
-    public String getHorarioAtendimento() {
-        return horarioAtendimento;
-    }
-
-    public void setHorarioAtendimento(String horarioAtendimento) {
-        this.horarioAtendimento = horarioAtendimento;
-    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -93,7 +81,4 @@ public class Clinicas  {
         return Objects.hash(username, cnpj);
     }
 
-    public int getID() {
-        return ID;
-    }
 }
