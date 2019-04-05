@@ -48,7 +48,7 @@ public class AnimaisDaoBanco implements AnimaisDao {
     public boolean salvar(Animais animal) throws IOException, ClassNotFoundException, SQLException {
         try (Connection connection = factory.getConnection()){
             PreparedStatement statement= connection.prepareStatement(
-                    "INSERT INTO animal(id, nome, especie, ongpertencente, idade, castrado) VALUES(?, ?, ?, ?, ?, ?, ?, ?);"
+                    "INSERT INTO animal(id, nome, especie, ongpertencente, idade, castrado) VALUES(?, ?, ?, ?, ?, ?);"
             );
 
             statement.setString(1, animal.getId());
