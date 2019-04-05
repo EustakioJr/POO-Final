@@ -1,9 +1,15 @@
 package Controle;
 
+import Modelo.Clinicas;
+
+import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class ControleTelaListaClinicaUser {
 
@@ -22,6 +28,30 @@ public class ControleTelaListaClinicaUser {
 
     @FXML
     private MenuItem menuLogout;
+
+    @FXML
+    private TableView<Clinicas> listaClinicas;
+
+    @FXML
+    private TableColumn<Clinicas, String> colNome;
+
+    @FXML
+    private TableColumn<Clinicas, String> colCnpj;
+
+    @FXML
+    private TableColumn<Clinicas, String> colEndereco;
+
+    @FXML
+    void initialize(){
+        TableColumn<Clinicas,String> colNome = new TableColumn("Nome");
+        colNome.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getNome()));
+
+        listaClinicas.getColumns().addAll(colNome);
+
+        colNome.setCellValueFactory(new PropertyValueFactory<>("cnpj"));
+        colCnpj.setCellValueFactory(new PropertyValueFactory<>("razaoSocial"));
+
+    }
 
     @FXML
     void irHome(ActionEvent event) {
