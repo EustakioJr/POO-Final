@@ -31,14 +31,14 @@ public class AnimaisDaoBanco implements AnimaisDao {
 
             while (resultSet.next())
             {
-                int id = resultSet.getInt("ID");
-                String nome = resultSet.getString("Nome");
-                String especie = resultSet.getString("Especie");
-                String ongPertencente = resultSet.getString("ONG Pertencente");
-                String idade = resultSet.getString("Idade");
-                boolean castrado = resultSet.getBoolean("Castrado");
+                int id = resultSet.getInt("id");
+                String nome = resultSet.getString("nome");
+                String especie = resultSet.getString("especie");
+                String ongPertencente = resultSet.getString("ongpertecente");
+                String idade = resultSet.getString("idade");
+                boolean castrado = resultSet.getBoolean("castrado");
 
-                animais.add(new Animais(nome, especie, ongPertencente, idade, castrado));
+                animais.add(new Animais(id, nome, especie, ongPertencente, idade, castrado));
             }
             return animais;
         }
@@ -74,13 +74,13 @@ public class AnimaisDaoBanco implements AnimaisDao {
             ResultSet resultSet = statement.executeQuery();
 
             if (resultSet.next()){
-                String nome = resultSet.getString("Nome");
-                String especie = resultSet.getString("Especie");
-                String ongPertencente = resultSet.getString("ONG Pertencente");
-                String idade = resultSet.getString("Idade");
-                boolean castrado = resultSet.getBoolean("Castrado");
+                String nome = resultSet.getString("nome");
+                String especie = resultSet.getString("especie");
+                String ongPertencente = resultSet.getString("ongpertecente");
+                String idade = resultSet.getString("idade");
+                boolean castrado = resultSet.getBoolean("castrado");
 
-                return new Animais(nome, especie, ongPertencente, idade, castrado);
+                return new Animais(id, nome, especie, ongPertencente, idade, castrado);
             }else return null;
         }
     }

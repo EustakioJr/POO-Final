@@ -2,21 +2,20 @@ package Modelo;
 
 
 public class Animais {
-    private static int cont;
-    private final int ID;
+    private int id;
     private String nome;
     private String especie;
     private String ongPertencente;
     private String idade;
     private boolean castrado;
 
-    public Animais(String nome, String especie, String ongPertencente, String idade, boolean castrado) {
+    public Animais(int id, String nome, String especie, String ongPertencente, String idade, boolean castrado) {
+        this.id = id;
         this.nome = nome;
         this.especie = especie;
         this.ongPertencente = ongPertencente;
         this.idade = idade;
         this.castrado = castrado;
-        ID = ++cont;
     }
 
     public String getNome() {

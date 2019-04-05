@@ -51,11 +51,11 @@ public class ControleRegistroAnimal {
     @FXML
     public void avisoConclusao(ActionEvent actionEvent) {
 
-        if (Nome.getText().isEmpty() || Especie.getText().isEmpty() || Idade.getText().isEmpty() || Ong.getText().isEmpty()){
+        if (Id.getText().isEmpty() || Nome.getText().isEmpty() || Especie.getText().isEmpty() || Idade.getText().isEmpty() || Ong.getText().isEmpty()){
             labelAviso.setText("Há campos vazios!");
         }else{
             try {
-                if (daoAnimais.salvar(new Animais(Nome.getText(), Especie.getText(), Idade.getText(), Ong.getText(), verifChecked()))){
+                if (daoAnimais.salvar(new Animais(Id.getText(), Nome.getText(), Especie.getText(), Idade.getText(), Ong.getText(), verifChecked()))){
                     labelAviso.setText("Animal registrado");
                 }else labelAviso.setText("ERRO! Animal não registrado");
             } catch (SQLException e) {

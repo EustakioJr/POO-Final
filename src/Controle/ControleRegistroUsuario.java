@@ -1,5 +1,7 @@
 package Controle;
 
+import Dao.UsuarioDaoBanco;
+import Modelo.Usuario;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -10,7 +12,13 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import util.TextFieldFormatter;
 
+import java.io.IOException;
+import java.sql.SQLException;
+
 public class ControleRegistroUsuario {
+
+    UsuarioDaoBanco daoUsuario = new UsuarioDaoBanco();
+
 
     @FXML
     private Button botaoRegistro;
@@ -38,6 +46,23 @@ public class ControleRegistroUsuario {
 
     @FXML
     void registrar(ActionEvent event) {
+
+        if (campoNome.getText().isEmpty() || campoUser.getText().isEmpty() || campoCpf.getText().isEmpty() || campoNasc.getValue() == null || campoSenha.getText().isEmpty()){
+            labelAviso.setText("Há campos vazios!");
+        }else{
+            try {
+                if (daoUsuario.salvar(new Usuario(campoNome.getText(), campoUser.getText(), campoCpf.getText(), campoNasc.getValue(), campoSenha.getText()))){
+                    labelAviso.setText("Animal registrado");
+                }else labelAviso.setText("ERRO! Animal não registrado");
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
         labelAviso.setText("Usuario registrado com Sucesso");
     }
 
