@@ -1,5 +1,11 @@
 package Modelo;
 
+/**
+ * A classe <b>Animais</b> tem como função guardar métodos e valores para o mesmo
+ * @author Eustakio Junior
+ * @author Alex Fernandes
+ */
+
 
 public class Animais {
     private int id;
@@ -9,6 +15,11 @@ public class Animais {
     private String idade;
     private boolean castrado;
 
+    /**
+     *Construtor com dados iniciais
+     */
+
+
     public Animais(int id, String nome, String especie, String ongPertencente, String idade, boolean castrado) {
         this.id = id;
         this.nome = nome;
@@ -17,6 +28,12 @@ public class Animais {
         this.idade = idade;
         this.castrado = castrado;
     }
+
+    /**
+     * Gets e Sets do objeto Animais
+     * @return nome, especie, ongPertence, idade, castrado, ID
+     */
+
 
     public String getNome() {
         return nome;
@@ -59,6 +76,6 @@ public class Animais {
     }
 
     public int getID() {
-        return ID;
+        return id;
     }
 }

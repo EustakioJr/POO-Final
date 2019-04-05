@@ -4,6 +4,13 @@ import java.sql.Date;
 import java.time.LocalDate;
 import java.util.Objects;
 
+/**
+ * A classe <b>Usuario</b> tem como função guardar métodos e valores para o mesmo
+ * @author Eustakio Junior
+ * @author Alex Fernandes
+ */
+
+
 public class Usuario {
     private static int cont;
     private final int ID;
@@ -13,6 +20,11 @@ public class Usuario {
     private LocalDate nascimento;
     private String senha;
 
+    /**
+     *Construtor com dados iniciais
+     */
+
+
     public Usuario(String nome, String username, String cpf, LocalDate nascimento, String senha) {
         this.nome = nome;
         this.username = username;
@@ -21,6 +33,13 @@ public class Usuario {
         this.senha = senha;
         ID = ++cont;
     }
+
+
+    /**
+     * Gets e Sets do objeto Animais
+     * @return nome, username, cpf, nascimento, senha, ID
+     */
+
 
     public String getNome() {
         return nome;

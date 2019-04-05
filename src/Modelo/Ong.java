@@ -2,6 +2,14 @@ package Modelo;
 
 import java.util.Objects;
 
+
+/**
+ * A classe <b>Ong</b> tem como função guardar métodos e valores para a mesma
+ * @author Eustakio Junior
+ * @author Alex Fernandes
+ */
+
+
 public class Ong {
     private String nomeOng;
     private String username;
@@ -9,6 +17,11 @@ public class Ong {
     private String endereco;
     private String senha;
     private String telefone;
+
+    /**
+     *Construtor com dados iniciais
+     */
+
 
     public Ong(String nomeOng, String username, String cnpj, String endereco, String senha, String telefone) {
         this.nomeOng = nomeOng;
@@ -18,6 +31,13 @@ public class Ong {
         this.senha = senha;
         this.telefone = telefone;
     }
+
+
+    /**
+     * Gets e Sets do objeto Animais
+     * @return nomeOng, username, cnpj, endereco, senha, telefone
+     */
+
 
     public String getNomeOng() {
         return nomeOng;

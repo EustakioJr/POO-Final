@@ -2,6 +2,13 @@ package Modelo;
 
 import java.util.Objects;
 
+/**
+ * A classe <b>Clinicas</b> tem como função guardar métodos e valores para a mesma
+ * @author Eustakio Junior
+ * @author Alex Fernandes
+ */
+
+
 public class Clinicas  {
     private String nome;
     private String username;
@@ -9,6 +16,12 @@ public class Clinicas  {
     private String cnpj;
     private String telefone;
     private String senha;
+
+
+    /**
+     *Construtor com dados iniciais
+     */
+
 
     public Clinicas(String nome, String username, String endereco, String cnpj, String telefone, String senha) {
         this.nome = nome;
@@ -18,6 +31,13 @@ public class Clinicas  {
         this.telefone = telefone;
         this.senha = senha;
     }
+
+
+    /**
+     * Gets e Sets do objeto Animais
+     * @return horarioAtendimento, nome, username, endereco, cnpj, telefone, senha
+     */
+
 
     public String getTelefone() {
         return telefone;
