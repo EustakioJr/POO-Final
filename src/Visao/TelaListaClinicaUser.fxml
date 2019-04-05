@@ -1,17 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.ControleTelaListaClinicaUser">
-    <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <Menu mnemonicParsing="false" text="File">
-            <MenuItem fx:id="menuHome" mnemonicParsing="false" onAction="#irHome" text="Home" />
-            <MenuItem fx:id="menuLogout" mnemonicParsing="false" onAction="#logout" text="Logout" />
-        </Menu>
-    </MenuBar>
-    <TableView layoutY="25.0" prefHeight="369.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0" />
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.ControleTelaListaClinicaUser">
+   <children>
+       <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <menus>
+              <Menu mnemonicParsing="false" text="File">
+                 <items>
+                     <MenuItem fx:id="menuHome" mnemonicParsing="false" onAction="#irHome" text="Home" />
+                     <MenuItem fx:id="menuLogout" mnemonicParsing="false" onAction="#logout" text="Logout" />
+                 </items>
+              </Menu>
+          </menus>
+       </MenuBar>
+       <TableView fx:id="listaClinicas" layoutX="240.0" layoutY="57.0" prefHeight="343.0" prefWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="57.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="48.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/clinic.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="ClinicaNome" layoutX="14.0" layoutY="232.0" prefHeight="17.0" prefWidth="218.0" text="???" textAlignment="CENTER" />
+      <Label fx:id="ClinicaCnpj" layoutX="14.0" layoutY="266.0" prefHeight="17.0" prefWidth="218.0" text="???" textAlignment="CENTER" />
+      <Label fx:id="ClinicaEndereco" layoutX="14.0" layoutY="299.0" prefHeight="17.0" prefWidth="218.0" text="???" textAlignment="CENTER" />
+      <Label alignment="CENTER" layoutX="262.0" layoutY="25.0" prefHeight="33.0" prefWidth="318.0" text="CLINICAS" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>
