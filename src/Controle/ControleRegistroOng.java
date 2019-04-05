@@ -1,16 +1,19 @@
 package Controle;
 
+import Dao.OngDaoBanco;
+import Modelo.Ong;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import util.TextFieldFormatter;
 
+import java.io.IOException;
+import java.sql.SQLException;
+
 public class ControleRegistroOng {
+
+    private OngDaoBanco daoOng = new OngDaoBanco();
 
     @FXML
     private Button botaoCadastro;
@@ -40,7 +43,42 @@ public class ControleRegistroOng {
     private Button botaoVoltar;
 
     public void registrar(ActionEvent actionEvent) {
-        labelAviso.setText("Sucesso");
+
+        if (campoNome.getText().isEmpty() || campoUser.getText().isEmpty() || campoCNPJ.getText().isEmpty() || campoEndereco.getText().isEmpty() || campoSenha.getText().isEmpty() || campoTelefone.getText().isEmpty()){
+            labelAviso.setText("Há campos vazios!");
+        }else{
+            try {
+                if (daoOng.salvar(new Ong(campoNome.getText(),
+                                campoUser.getText(),
+                                campoCNPJ.getText(),
+                                campoEndereco.getText(),
+                                campoSenha.getText(),
+                                campoTelefone.getText()))){
+                    Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
+                    alerta.setTitle("Cadastrado com Sucesso!");
+                    alerta.setHeaderText("A sua ONG foi cadastrada!");
+                    alerta.show();
+                    limpar();
+//                    labelAviso.setText("ONG registrado");
+                }else labelAviso.setText("ERRO! ONG não registrado");
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    public void limpar(){
+        campoNome.setText("");
+        campoUser.setText("");
+        campoCNPJ.setText("");
+        campoEndereco.setText("");
+        campoSenha.setText("");
+        campoTelefone.setText("");
     }
 
     @FXML

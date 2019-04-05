@@ -3,8 +3,6 @@ package Modelo;
 import java.util.Objects;
 
 public class Ong {
-    private static int cont;
-    private final int ID;
     private String nomeOng;
     private String username;
     private String cnpj;
@@ -19,7 +17,6 @@ public class Ong {
         this.endereco = endereco;
         this.senha = senha;
         this.telefone = telefone;
-        ID = ++cont;
     }
 
     public String getNomeOng() {
@@ -84,7 +81,4 @@ public class Ong {
         return Objects.hash(username, cnpj);
     }
 
-    public int getID() {
-        return ID;
-    }
 }

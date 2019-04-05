@@ -1,15 +1,16 @@
 package Modelo;
 
+
 public class Animais {
     private static int cont;
     private final int ID;
     private String nome;
     private String especie;
     private String ongPertencente;
-    private int idade;
+    private String idade;
     private boolean castrado;
 
-    public Animais(String nome, String especie, String ongPertencente, int idade, boolean castrado) {
+    public Animais(String nome, String especie, String ongPertencente, String idade, boolean castrado) {
         this.nome = nome;
         this.especie = especie;
         this.ongPertencente = ongPertencente;
@@ -42,11 +43,11 @@ public class Animais {
         this.ongPertencente = ongPertencente;
     }
 
-    public int getidade() {
+    public String getidade() {
         return idade;
     }
 
-    public void setidade(int idade) {
+    public void setidade(String idade) {
         this.idade = idade;
     }
 
