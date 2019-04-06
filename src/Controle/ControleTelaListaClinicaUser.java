@@ -43,13 +43,6 @@ public class ControleTelaListaClinicaUser {
 
     @FXML
     void initialize(){
-        TableColumn<Clinicas,String> colNome = new TableColumn("Nome");
-        colNome.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getNome()));
-
-        listaClinicas.getColumns().addAll(colNome);
-
-        colNome.setCellValueFactory(new PropertyValueFactory<>("cnpj"));
-        colCnpj.setCellValueFactory(new PropertyValueFactory<>("razaoSocial"));
 
     }
 

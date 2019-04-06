@@ -32,12 +32,12 @@ public class OngDaoBanco implements OngDao {
 
             while (resultSet.next())
             {
-                String nome = resultSet.getString("Razão");
-                String username = resultSet.getString("User");
-                String cnpj = resultSet.getString("CNPJ");
-                String endereco = resultSet.getString("Endereço");
-                String senha = resultSet.getString("Senha");
-                String telefone = resultSet.getString("Telefone");
+                String nome = resultSet.getString("razao");
+                String username = resultSet.getString("username");
+                String cnpj = resultSet.getString("cnpj");
+                String endereco = resultSet.getString("endereco");
+                String senha = resultSet.getString("senha");
+                String telefone = resultSet.getString("telefone");
 
                 ongs.add(new Ong(nome, username, cnpj, endereco, senha, telefone));
             }
@@ -76,11 +76,11 @@ public class OngDaoBanco implements OngDao {
             ResultSet resultSet = statement.executeQuery();
 
             if (resultSet.next()){
-                String nome = resultSet.getString("Razão");
-                String cnpj = resultSet.getString("CNPJ");
-                String endereco = resultSet.getString("Endereço");
-                String senha = resultSet.getString("Senha");
-                String telefone = resultSet.getString("Telefone");
+                String nome = resultSet.getString("razao");
+                String cnpj = resultSet.getString("cnpj");
+                String endereco = resultSet.getString("endereco");
+                String senha = resultSet.getString("senha");
+                String telefone = resultSet.getString("telefone");
 
                 return new Ong(nome, username, cnpj, endereco, senha, telefone);
             }else return null;

@@ -5,11 +5,7 @@ import Modelo.Animais;
 import javafx.beans.property.BooleanProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -31,7 +27,7 @@ public class ControleRegistroAnimal {
     private TextField Especie;
 
     @FXML
-    private TextField Idade;
+    private DatePicker Idade;
 
     @FXML
     private TextField Ong;
@@ -52,17 +48,18 @@ public class ControleRegistroAnimal {
     private MenuItem botaoLogout;
 
     @FXML
-    public void avisoConclusao(ActionEvent actionEvent) {
+    public void cadastrar(ActionEvent actionEvent) {
 
-        if (Id.getText().isEmpty() || Nome.getText().isEmpty() || Especie.getText().isEmpty() || Idade.getText().isEmpty() || Ong.getText().isEmpty()){
+        if (Id.getText().isEmpty() || Nome.getText().isEmpty() || Especie.getText().isEmpty() || Idade.getValue()== null || Ong.getText().isEmpty()){
             labelAviso.setText("Há campos vazios!");
         }else{
             try {
-                if (daoAnimais.salvar(new Animais(Id.getText(), Nome.getText(), Especie.getText(), Idade.getText(), Ong.getText(), verifChecked()))){
+                if (daoAnimais.salvar(new Animais(Id.getText(), Nome.getText(), Especie.getText(), Ong.getText(), Idade.getValue(), verifChecked()))){
                     labelAviso.setText("Animal registrado");
                 }else labelAviso.setText("ERRO! Animal não registrado");
             } catch (SQLException e) {
                 e.printStackTrace();
+                labelAviso.setText("Dados Invalidos!");
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             } catch (IOException e) {
@@ -85,7 +82,7 @@ public class ControleRegistroAnimal {
     @FXML
     void irHome(ActionEvent event) {
         Especie.setText("");
-        Idade.setText("");
+        Idade.setValue(null);
         Ong.setText("");
         Nome.setText("");
         checkCastrado.setSelected(false);
@@ -95,7 +92,7 @@ public class ControleRegistroAnimal {
     @FXML
     void logout(ActionEvent event) {
         Especie.setText("");
-        Idade.setText("");
+        Idade.setValue(null);
         Ong.setText("");
         Nome.setText("");
         checkCastrado.setSelected(false);

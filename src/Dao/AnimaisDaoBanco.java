@@ -4,10 +4,8 @@ import Banco.ConFactory;
 import Modelo.Animais;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -35,7 +33,7 @@ public class AnimaisDaoBanco implements AnimaisDao {
                 String nome = resultSet.getString("nome");
                 String especie = resultSet.getString("especie");
                 String ongPertencente = resultSet.getString("ongpertecente");
-                String idade = resultSet.getString("idade");
+                LocalDate idade = resultSet.getDate("idade").toLocalDate();
                 boolean castrado = resultSet.getBoolean("castrado");
 
                 animais.add(new Animais(id, nome, especie, ongPertencente, idade, castrado));
@@ -55,7 +53,7 @@ public class AnimaisDaoBanco implements AnimaisDao {
             statement.setString(2, animal.getNome());
             statement.setString(3, animal.getEspecie());
             statement.setString(4, animal.getOngPertencente());
-            statement.setString(5, animal.getidade());
+            statement.setDate(5, Date.valueOf(animal.getNascimento()));
             statement.setBoolean(6, animal.isCastrado());
 
             return statement.executeUpdate() > 0;
@@ -77,7 +75,7 @@ public class AnimaisDaoBanco implements AnimaisDao {
                 String nome = resultSet.getString("nome");
                 String especie = resultSet.getString("especie");
                 String ongPertencente = resultSet.getString("ongpertecente");
-                String idade = resultSet.getString("idade");
+                LocalDate idade = resultSet.getDate("idade").toLocalDate();
                 boolean castrado = resultSet.getBoolean("castrado");
 
                 return new Animais(id, nome, especie, ongPertencente, idade, castrado);
@@ -110,7 +108,7 @@ public class AnimaisDaoBanco implements AnimaisDao {
             statement.setString(1, animal.getNome());
             statement.setString(2, animal.getEspecie());
             statement.setString(3, animal.getOngPertencente());
-            statement.setString(4, animal.getidade());
+            statement.setDate(4, Date.valueOf(animal.getNascimento()));
             statement.setBoolean(5, animal.isCastrado());
             statement.setString(6, animal.getId());
 

@@ -1,5 +1,7 @@
 package Modelo;
 
+import java.time.LocalDate;
+
 /**
  * A classe <b>Animais</b> tem como função guardar métodos e valores para o mesmo
  * @author Eustakio Junior
@@ -12,7 +14,7 @@ public class Animais {
     private String nome;
     private String especie;
     private String ongPertencente;
-    private String idade;
+    private LocalDate Nascimento;
     private boolean castrado;
 
     /**
@@ -20,18 +22,18 @@ public class Animais {
      */
 
 
-    public Animais(String id, String nome, String especie, String ongPertencente, String idade, boolean castrado) {
+    public Animais(String id, String nome, String especie, String ongPertencente, LocalDate Nascimento, boolean castrado) {
         this.id = id;
         this.nome = nome;
         this.especie = especie;
         this.ongPertencente = ongPertencente;
-        this.idade = idade;
+        this.Nascimento = Nascimento;
         this.castrado = castrado;
     }
 
     /**
      * Gets e Sets do objeto Animais
-     * @return nome, especie, ongPertence, idade, castrado, ID
+     * @return nome, especie, ongPertence, Nascimento, castrado, ID
      */
 
 
@@ -59,12 +61,12 @@ public class Animais {
         this.ongPertencente = ongPertencente;
     }
 
-    public String getidade() {
-        return idade;
+    public LocalDate getNascimento() {
+        return Nascimento;
     }
 
-    public void setidade(String idade) {
-        this.idade = idade;
+    public void setNascimento(LocalDate Nascimento) {
+        this.Nascimento = Nascimento;
     }
 
     public boolean isCastrado() {
