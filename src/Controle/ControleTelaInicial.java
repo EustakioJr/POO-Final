@@ -9,23 +9,30 @@ import Modelo.Usuario;
 import Visao.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
+import javafx.scene.control.*;
 
-import java.net.URL;
 import java.sql.SQLException;
-import java.util.ResourceBundle;
+import Enum.TipoCadastro;
 
-/**
- * Classe responsavel de salvar os IDs dos elementos graficos da interface e guardar os metodos que serão utilizados.
- */
-public class ControleTelaInicial implements Initializable {
+public class ControleTelaInicial {
+
+
     OngDaoBanco daoOng = new OngDaoBanco();
     ClinicasDaoBanco daoClinica = new ClinicasDaoBanco();
     UsuarioDaoBanco daoUsuario = new UsuarioDaoBanco();
-    /**
-     * IDs da interface grafica
-     */
+
+    @FXML
+    private ChoiceBox<TipoCadastro> campoTipo;
+
+    @FXML
+    private PasswordField campoSenha;
+
+    @FXML
+    private TextField campoUser;
+
+    @FXML
+    private Label labelAviso;
+
     @FXML
     private Button botaoLogin;
 
@@ -37,14 +44,83 @@ public class ControleTelaInicial implements Initializable {
         Visao.App.trocaTela("cadastro");
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
+    @FXML
+    void irTelaLogin(ActionEvent event) {
+        Visao.App.trocaTela("login");
     }
 
-    /**
-     * Metodo que realiza a busca e autenticação do login e o realiza
-     * @param event
-     */
+    @FXML
+    void login(ActionEvent event) {
+        if (campoUser.getText().isEmpty() || campoSenha.getText().isEmpty()) {
+            labelAviso.setText("Preenchar todos os camopos");
+        }
+
+        switch (campoTipo.getValue()){
+            case ONG:
+                try{
+                    Ong ong = daoOng.buscarPorUsername(campoUser.getText());
+                    if (ong != null){
+                        if (ong.getSenha().compareTo(campoSenha.getText()) == 0){
+                            Visao.App.trocaTela("homeOng");
+                        }else labelAviso.setText("Dados invalidos");
+                    } else{
+                        labelAviso.setText("Dados invalidos");
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                campoSenha.setText("");
+                campoUser.setText("");
+                campoTipo.setValue(null);
+                break;
+            case CLINICA:
+                try{
+                    Clinicas clinica = daoClinica.buscarPorUsername(campoUser.getText());
+                    if (clinica != null){
+                        if (clinica.getSenha().compareTo(campoSenha.getText()) == 0){
+                            Visao.App.trocaTela("homeClinica");
+                        }else labelAviso.setText("Dados invalidos");
+                    } else{
+                        labelAviso.setText("Dados invalidos");
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+                campoSenha.setText("");
+                campoUser.setText("");
+                campoTipo.setValue(null);
+                break;
+            case USUARIO:
+                try{
+                    Usuario usuario = daoUsuario.buscarPorUsername(campoUser.getText());
+                    if (usuario != null){
+                        if (usuario.getSenha().compareTo(campoSenha.getText()) == 0){
+                            Visao.App.trocaTela("homeUsuario");
+                        }else labelAviso.setText("Dados invalidos");
+                    } else{
+                        labelAviso.setText("Dados invalidos");
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+                campoSenha.setText("");
+                campoUser.setText("");
+                campoTipo.setValue(null);
+
+        }
+    }
+
+    public void initialize() {
+        campoTipo.getItems().addAll(TipoCadastro.values());
+
+    }
 
 }

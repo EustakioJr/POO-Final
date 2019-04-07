@@ -32,7 +32,7 @@ public class AnimaisDaoBanco implements AnimaisDao {
                 String id = resultSet.getString("id");
                 String nome = resultSet.getString("nome");
                 String especie = resultSet.getString("especie");
-                String ongPertencente = resultSet.getString("ongpertecente");
+                String ongPertencente = resultSet.getString("ongpertencente");
                 LocalDate idade = resultSet.getDate("idade").toLocalDate();
                 boolean castrado = resultSet.getBoolean("castrado");
 
@@ -74,7 +74,7 @@ public class AnimaisDaoBanco implements AnimaisDao {
             if (resultSet.next()){
                 String nome = resultSet.getString("nome");
                 String especie = resultSet.getString("especie");
-                String ongPertencente = resultSet.getString("ongpertecente");
+                String ongPertencente = resultSet.getString("ongpertencente");
                 LocalDate idade = resultSet.getDate("idade").toLocalDate();
                 boolean castrado = resultSet.getBoolean("castrado");
 
