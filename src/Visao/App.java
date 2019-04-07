@@ -102,7 +102,7 @@ public class App extends Application {
         telaListaAnimalUser = new Scene(fxmlTelaListaAnimalUser, 600, 400);
 
         //Cria a tela de lista de animais para ongs
-        Parent fxmlTelaListaAnimalOng = FXMLLoader.load(getClass().getResource("TelaListaAnimaisOng.fxml"));
+        Parent fxmlTelaListaAnimalOng = FXMLLoader.load(getClass().getResource("TelaListaAnimais.fxml"));
         telaListaAnimalOng = new Scene(fxmlTelaListaAnimalOng, 600, 400);
 
         //Seta a tela que sera mostrada ao iniciar o aplicativo
