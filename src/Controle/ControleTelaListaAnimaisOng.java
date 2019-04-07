@@ -1,6 +1,7 @@
 package Controle;
 
 import Dao.AnimaisDaoBanco;
+import Excecoes.DataInvalida;
 import Modelo.Animais;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -89,7 +90,13 @@ public class ControleTelaListaAnimaisOng implements Initializable {
         }
 
 
-        tableAnimais.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> selectItemAnimais(newValue));
+        tableAnimais.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            try {
+                selectItemAnimais(newValue);
+            } catch (DataInvalida dataInvalida) {
+                dataInvalida.printStackTrace();
+            }
+        });
     }
 
     public void carregarTableViewAnimais() throws SQLException, ClassNotFoundException, IOException {
@@ -103,7 +110,7 @@ public class ControleTelaListaAnimaisOng implements Initializable {
         tableAnimais.setItems(observableListAnimais);
     }
 
-    public void selectItemAnimais(Animais animais) {
+    public void selectItemAnimais(Animais animais) throws DataInvalida {
         if (animais != null) {
             labelId.setText(animais.getId());
             campoNome.setText(animais.getNome());

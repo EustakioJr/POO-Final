@@ -1,5 +1,7 @@
 package Modelo;
 
+import Excecoes.DataInvalida;
+
 import java.time.LocalDate;
 
 /**
@@ -61,7 +63,9 @@ public class Animais {
         this.ongPertencente = ongPertencente;
     }
 
-    public LocalDate getNascimento() {
+    public LocalDate getNascimento() throws DataInvalida {
+        if (Nascimento.compareTo(LocalDate.now()) > 0) throw new DataInvalida(
+                "Data de nascimento Invalida");
         return Nascimento;
     }
 

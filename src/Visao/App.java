@@ -22,13 +22,10 @@ public class App extends Application {
     private static Scene telaHomeClinica;
     private static Scene telaRegistroAnimal;
     private static Scene telaRegistroVet;
-    private static Scene telaListaOngUser;
-    private static Scene telaListaOngClinica;
-    private static Scene telaListaClinicaUser;
-    private static Scene telaListaClinicaOng;
+    private static Scene telaListaOng;
+    private static Scene telaListaClinica;
     private static Scene telaListaVet;
-    private static Scene telaListaAnimalUser;
-    private static Scene telaListaAnimalOng;
+    private static Scene telaListaAnimal;
 
 
     @Override
@@ -77,33 +74,22 @@ public class App extends Application {
         Parent fxmlTelaRegistroVet = FXMLLoader.load(getClass().getResource("TelaRegistroVet.fxml"));
         telaRegistroVet = new Scene(fxmlTelaRegistroVet, 600, 400);
 
-        //Cria a tela de lista de ONGs para usuarios
-        Parent fxmlTelaListaOngUser = FXMLLoader.load(getClass().getResource("TelaListaOngUser.fxml"));
-        telaListaOngUser = new Scene(fxmlTelaListaOngUser, 600, 400);
+        //Cria a tela de lista de ONGs
+        Parent fxmlTelaListaOng = FXMLLoader.load(getClass().getResource("TelaListaOngUser.fxml"));
+        telaListaOng = new Scene(fxmlTelaListaOng, 600, 400);
 
-        //Cria a tela de lista de ONGs para clinicas
-        Parent fxmlTelaListaOngClinica = FXMLLoader.load(getClass().getResource("TelaListaOngClinica.fxml"));
-        telaListaOngClinica = new Scene(fxmlTelaListaOngClinica, 600, 400);
-
-        //Cria a tela de lista de Clinicas para usuarios
-        Parent fxmlTelaListaClinicaUser = FXMLLoader.load(getClass().getResource("TelaListaClinicaUser.fxml"));
-        telaListaClinicaUser = new Scene(fxmlTelaListaClinicaUser, 600, 400);
-
-        //Cria a tela de lista de Clinicas para ONGs
-        Parent fxmlTelaListaClinicaOng = FXMLLoader.load(getClass().getResource("TelaListaClinicaOng.fxml"));
-        telaListaClinicaOng = new Scene(fxmlTelaListaClinicaOng, 600, 400);
+        //Cria a tela de lista de Clinica
+        Parent fxmlTelaListaClinica = FXMLLoader.load(getClass().getResource("TelaListaClinica.fxml"));
+        telaListaClinica = new Scene(fxmlTelaListaClinica, 600, 400);
 
         //Cria a tela de lista de Veterinarios para as clinicas
         Parent fxmlTelaListaVet = FXMLLoader.load(getClass().getResource("TelaListaVet.fxml"));
         telaListaVet = new Scene(fxmlTelaListaVet, 600, 400);
 
-        //Cria a tela de lista de Animais para usuarios
-        Parent fxmlTelaListaAnimalUser = FXMLLoader.load(getClass().getResource("TelaListaAnimaisUser.fxml"));
-        telaListaAnimalUser = new Scene(fxmlTelaListaAnimalUser, 600, 400);
+        //Cria a tela de lista de Animais
+        Parent fxmlTelaListaAnimal = FXMLLoader.load(getClass().getResource("TelaListaAnimais.fxml"));
+        telaListaAnimal = new Scene(fxmlTelaListaAnimal, 600, 400);
 
-        //Cria a tela de lista de animais para ongs
-        Parent fxmlTelaListaAnimalOng = FXMLLoader.load(getClass().getResource("TelaListaAnimais.fxml"));
-        telaListaAnimalOng = new Scene(fxmlTelaListaAnimalOng, 600, 400);
 
         //Seta a tela que sera mostrada ao iniciar o aplicativo
         PrimaryStage.setScene(telaInicio);
@@ -154,33 +140,21 @@ public class App extends Application {
                 stage.setScene(telaRegistroVet);
                 notifyAllListeners("registroVet", usuario, tipo);
                 break;
-            case "listaOngUser":
-                stage.setScene(telaListaOngUser);
-                notifyAllListeners("listaOngUser", usuario, tipo);
+            case "listaOng":
+                stage.setScene(telaListaOng);
+                notifyAllListeners("listaOng", usuario, tipo);
                 break;
-            case "listaOngClinica": //fadada a desaparecer
-                stage.setScene(telaListaOngClinica);
-                notifyAllListeners("listaOngClinica", usuario, tipo);
-                break;
-            case "listaClinicaUser":
-                stage.setScene(telaListaClinicaUser);
-                notifyAllListeners("listaClinicaUser", usuario, tipo);
-                break;
-            case "listaClinicaOng": //fadada a desaparecer
-                stage.setScene(telaListaClinicaOng);
-                notifyAllListeners("listaClinicaOng", usuario, tipo);
+            case "listaClinica":
+                stage.setScene(telaListaClinica);
+                notifyAllListeners("listaClinica", usuario, tipo);
                 break;
             case "listaVet":
                 stage.setScene(telaListaVet);
                 notifyAllListeners("listaVet", usuario, tipo);
                 break;
-            case "listaAnimalUser":
-                stage.setScene(telaListaAnimalUser);
-                notifyAllListeners("homeAnimalUser", usuario, tipo);
-                break;
-            case "listaAnimalOng":
-                stage.setScene(telaListaAnimalOng);
-                notifyAllListeners("listaAnimalOng", usuario, tipo);
+            case "listaAnimal":
+                stage.setScene(telaListaAnimal);
+                notifyAllListeners("homeAnimar", usuario, tipo);
                 break;
         }
     }

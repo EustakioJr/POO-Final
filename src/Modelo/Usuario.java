@@ -1,8 +1,11 @@
 package Modelo;
 
+import Excecoes.DataInvalida;
+
 import java.sql.Date;
 import java.time.LocalDate;
 import java.util.Objects;
+import Excecoes.DataInvalida;
 
 /**
  * A classe <b>Usuario</b> tem como função guardar métodos e valores para o mesmo
@@ -65,7 +68,9 @@ public class Usuario {
         this.cpf = cpf;
     }
 
-    public LocalDate getNascimento() {
+    public LocalDate getNascimento() throws DataInvalida {
+        if (nascimento.compareTo(LocalDate.now()) > 0) throw new DataInvalida(
+                "Data de nascimento Invalida");
         return nascimento;
     }
 

@@ -1,6 +1,7 @@
 package Dao;
 
 import Banco.ConFactory;
+import Excecoes.DataInvalida;
 import Modelo.Usuario;
 
 import java.io.IOException;
@@ -43,7 +44,7 @@ public class UsuarioDaoBanco implements UsuarioDao {
     }
 
     @Override
-    public boolean salvar(Usuario usuario) throws IOException, ClassNotFoundException, SQLException {
+    public boolean salvar(Usuario usuario) throws IOException, ClassNotFoundException, SQLException{
 
 
         try (Connection connection = factory.getConnection()){
@@ -58,6 +59,8 @@ public class UsuarioDaoBanco implements UsuarioDao {
             statement.setString(5, usuario.getSenha());
 
             return statement.executeUpdate() > 0;
+        } catch (DataInvalida dataInvalida) {
+            return false;
         }
     }
 
@@ -112,6 +115,8 @@ public class UsuarioDaoBanco implements UsuarioDao {
             statement.setString(5, usuario.getCpf());
 
             return statement.executeUpdate() > 0;
+        } catch (DataInvalida dataInvalida) {
+            return false;
         }
     }
 }

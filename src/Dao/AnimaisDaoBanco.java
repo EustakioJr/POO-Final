@@ -1,6 +1,7 @@
 package Dao;
 
 import Banco.ConFactory;
+import Excecoes.DataInvalida;
 import Modelo.Animais;
 
 import java.io.IOException;
@@ -57,6 +58,8 @@ public class AnimaisDaoBanco implements AnimaisDao {
             statement.setBoolean(6, animal.isCastrado());
 
             return statement.executeUpdate() > 0;
+        } catch (DataInvalida dataInvalida) {
+            return false;
         }
     }
 
@@ -113,6 +116,8 @@ public class AnimaisDaoBanco implements AnimaisDao {
             statement.setString(6, animal.getId());
 
             return statement.executeUpdate() > 0;
+        } catch (DataInvalida dataInvalida) {
+            return false;
         }
     }
 

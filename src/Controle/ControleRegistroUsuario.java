@@ -63,15 +63,16 @@ public class ControleRegistroUsuario implements Initializable {
     @FXML
     void registrar(ActionEvent event) {
 
-        if (campoNome.getText().isEmpty() || campoUser.getText().isEmpty() || campoCpf.getText().isEmpty() || campoNasc.getValue() == null || campoSenha.getText().isEmpty()){
+        if (campoNome.getText().isEmpty() || campoUser.getText().isEmpty() || campoCpf.getText().isEmpty() || campoNasc.getValue() == null|| campoSenha.getText().isEmpty()){
             labelAviso.setText("Há campos vazios!");
         }else{
             try {
                 if (daoUsuario.salvar(new Usuario(campoNome.getText(), campoUser.getText(), campoCpf.getText(), campoNasc.getValue(), campoSenha.getText()))){
-                    labelAviso.setText("Animal registrado");
-                }else labelAviso.setText("ERRO! Animal não registrado");
+                    labelAviso.setText("Usuario registrado");
+                    limpar();
+                }else labelAviso.setText("ERRO! Data de nascimento invalida");
             } catch (SQLException e) {
-                e.printStackTrace();
+               labelAviso.setText("ERRO! CPF ou Username ja cadastrado");
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             } catch (IOException e) {
@@ -109,6 +110,15 @@ public class ControleRegistroUsuario implements Initializable {
         tff.setCaracteresValidos("0123456789");
         tff.setTf(campoCpf);
         tff.formatter();
+    }
+
+    void limpar(){
+        campoCpf.setText("");
+        campoNasc.setValue(null);
+        campoNome.setText("");
+        campoSenha.setText("");
+        campoUser.setText("");
+        labelAviso.setText("");
     }
 
     @Override
