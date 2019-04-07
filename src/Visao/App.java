@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+
 
 public class App extends Application {
     private static Stage stage;
@@ -109,64 +111,100 @@ public class App extends Application {
         PrimaryStage.show();
     }
 
-    public static void trocaTela (String idTela){
+    public static void trocaTela (String idTela, String usuario, String tipo){
         //troca a tela que esta sendo mostrada de acordo com o valor da tela informado.
         switch (idTela){
             case "inicio":
                 stage.setScene(telaInicio);
+                notifyAllListeners("inicio", usuario, tipo);
                 break;
             case "cadastro":
                 stage.setScene(telaCadastro);
+                notifyAllListeners("cadastro", usuario, tipo);
                 break;
             case "registroClinica":
                 stage.setScene(telaRegistroClinica);
+                notifyAllListeners("registroClinica", usuario, tipo);
                 break;
             case "registroOng":
                 stage.setScene(telaRegistroOng);
+                notifyAllListeners("registroOng", usuario, tipo);
                 break;
             case "registroUsuario":
                 stage.setScene(telaRegistroUsuario);
+                notifyAllListeners("registroUsuario", usuario, tipo);
                 break;
             case "homeUsuario":
                 stage.setScene(telaHomeUsuario);
+                notifyAllListeners("homeUsuario", usuario, tipo);
                 break;
             case "homeOng":
                 stage.setScene(telaHomeOng);
+                notifyAllListeners("homeOng", usuario, tipo);
                 break;
             case "homeClinica":
                 stage.setScene(telaHomeClinica);
+                notifyAllListeners("homeClinica", usuario, tipo);
                 break;
             case "registroAnimal":
                 stage.setScene(telaRegistroAnimal);
+                notifyAllListeners("registroAnimal", usuario, tipo);
                 break;
             case "registroVet":
                 stage.setScene(telaRegistroVet);
+                notifyAllListeners("registroVet", usuario, tipo);
                 break;
             case "listaOngUser":
                 stage.setScene(telaListaOngUser);
+                notifyAllListeners("listaOngUser", usuario, tipo);
                 break;
-            case "listaOngClinica":
+            case "listaOngClinica": //fadada a desaparecer
                 stage.setScene(telaListaOngClinica);
+                notifyAllListeners("listaOngClinica", usuario, tipo);
                 break;
             case "listaClinicaUser":
                 stage.setScene(telaListaClinicaUser);
+                notifyAllListeners("listaClinicaUser", usuario, tipo);
                 break;
-            case "listaClinicaOng":
+            case "listaClinicaOng": //fadada a desaparecer
                 stage.setScene(telaListaClinicaOng);
+                notifyAllListeners("listaClinicaOng", usuario, tipo);
                 break;
             case "listaVet":
                 stage.setScene(telaListaVet);
+                notifyAllListeners("listaVet", usuario, tipo);
                 break;
             case "listaAnimalUser":
                 stage.setScene(telaListaAnimalUser);
+                notifyAllListeners("homeAnimalUser", usuario, tipo);
                 break;
             case "listaAnimalOng":
                 stage.setScene(telaListaAnimalOng);
+                notifyAllListeners("listaAnimalOng", usuario, tipo);
                 break;
         }
     }
+    public static void trocaTela (String idTela){
+        trocaTela(idTela, "", "");
+    }
 
     public static void main(String[] args) {launch(args); }
+
+    //----------------------------------------------------------
+    private static ArrayList<OnChangeScreen> listeners = new ArrayList<>();
+
+    public static interface OnChangeScreen{
+        void onScreenChanged(String novaTela, String usuario, String tipo);
+    }
+
+    public static void addOnChangeScreenListener(OnChangeScreen newListener){
+        listeners.add(newListener);
+    }
+
+    public static void notifyAllListeners(String novaTela, String usuario, String tipo){
+        for(OnChangeScreen l : listeners)
+            l.onScreenChanged(novaTela, usuario, tipo);
+    }
 }
 
 

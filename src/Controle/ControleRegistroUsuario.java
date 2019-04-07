@@ -2,8 +2,10 @@ package Controle;
 
 import Dao.UsuarioDaoBanco;
 import Modelo.Usuario;
+import Visao.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
@@ -13,7 +15,9 @@ import javafx.scene.input.KeyEvent;
 import util.TextFieldFormatter;
 
 import java.io.IOException;
+import java.net.URL;
 import java.sql.SQLException;
+import java.util.ResourceBundle;
 
 /**
  * A classe <ControleRegistroUsuario> registra os ids dos elementos da interface grafica e metodos que a mesma realiza.
@@ -21,9 +25,9 @@ import java.sql.SQLException;
  * @author EustakioJr
  * @author Alex Fernandes
  */
-public class ControleRegistroUsuario {
+public class ControleRegistroUsuario implements Initializable {
 
-    private UsuarioDaoBanco daoUsuario = new UsuarioDaoBanco();
+   private UsuarioDaoBanco daoUsuario = new UsuarioDaoBanco();
 
     /**
      * IDs dos campos da interface grafica
@@ -107,4 +111,15 @@ public class ControleRegistroUsuario {
         tff.formatter();
     }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        App.addOnChangeScreenListener(new App.OnChangeScreen() {
+            @Override
+            public void onScreenChanged(String novaTela, String usuario, String tipo) {
+                System.out.println("Nova tela:"+ novaTela +", " + usuario + ", "+ tipo);
+            }
+        });{
+
+        }
+    }
 }
