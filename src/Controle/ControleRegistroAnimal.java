@@ -10,10 +10,18 @@ import javafx.scene.control.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
+/**
+ * A classe <ControleRegistroAnimal> registra os ids dos elementos da interface grafica e metodos que a mesma realiza.
+ * Serve tambem para auxiliar a criação de objetos to tipo Animal.
+ * @author EustakioJr
+ * @author Alex Fernandes
+ */
 public class ControleRegistroAnimal {
 
-    AnimaisDaoBanco daoAnimais = new AnimaisDaoBanco();
-
+    private AnimaisDaoBanco daoAnimais = new AnimaisDaoBanco();
+    /**
+     * IDs da interface grafica
+     */
     @FXML
     private Label labelAviso;
 
@@ -47,6 +55,10 @@ public class ControleRegistroAnimal {
     @FXML
     private MenuItem botaoLogout;
 
+    /**
+     * Função que serve para criação do objeto animal.
+     * @param actionEvent
+     */
     @FXML
     public void cadastrar(ActionEvent actionEvent) {
 
@@ -70,6 +82,10 @@ public class ControleRegistroAnimal {
 
     }
 
+    /**
+     * Esta função verifica se o campo que informa se o animal é castrado esta marcado ou não.
+     * @return
+     */
     public boolean verifChecked(){
 
         if (checkCastrado.selectedProperty().getValue()) {
@@ -79,6 +95,10 @@ public class ControleRegistroAnimal {
         }
     }
 
+    /**
+     * Função responsavel por retornar o usuario Ong para sua tela de home.
+     * @param event
+     */
     @FXML
     void irHome(ActionEvent event) {
         Especie.setText("");
@@ -89,6 +109,10 @@ public class ControleRegistroAnimal {
         Visao.App.trocaTela("homeOng");
     }
 
+    /**
+     * Função responsavel por fazer o logout do usuario e retorna-lo para a pagina de login.
+     * @param event
+     */
     @FXML
     void logout(ActionEvent event) {
         Especie.setText("");

@@ -50,6 +50,10 @@ public class ControleTelaLogin {
         Visao.App.trocaTela("inicio");
     }
 
+    /**
+     * Metodo que realiza a busca e autenticação do login e o realiza
+     * @param event
+     */
     @FXML
     void login(ActionEvent event) {
         if (campoUser.getText().isEmpty() || campoSenha.getText().isEmpty()) {

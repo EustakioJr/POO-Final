@@ -14,10 +14,18 @@ import util.TextFieldFormatter;
 import java.io.IOException;
 import java.sql.SQLException;
 
+/**
+ * A classe <ControleRegistroVet> registra os ids dos elementos da interface grafica e metodos que a mesma realiza.
+ * Serve tambem para auxiliar a criação de objetos to tipo Veterinarios.
+ * @author EustakioJr
+ * @author Alex Fernandes
+ */
 public class ControleRegistroVet {
 
     VeterinariosDaoBanco daoVeterinario = new VeterinariosDaoBanco();
-
+    /**
+     * IDs da interface grafica.
+     */
     @FXML
     private Label labelAviso;
 
@@ -42,8 +50,13 @@ public class ControleRegistroVet {
     @FXML
     private MenuItem botaoLogout;
 
+
+    /**
+     * Função que realiza o cadastro de objetos do tipo Veterinario.
+     * @param event
+     */
     @FXML
-    void avisoConclusao(ActionEvent event) {
+    void cadastrar(ActionEvent event) {
 
         if (textNome.getText().isEmpty() || textTelefone.getText().isEmpty() || textCrvm.getText().isEmpty() || textEmail.getText().isEmpty()){
             labelAviso.setText("Há campos vazios!");
@@ -64,7 +77,10 @@ public class ControleRegistroVet {
 
         labelAviso.setText("Veterinario registrado com sucesso");
     }
-
+    /**
+     * Função responsavel por retornar o usuario Clinica para sua tela de home.
+     * @param event
+     */
     @FXML
     void irHome(ActionEvent event) {
         textCrvm.setText("");
@@ -75,8 +91,12 @@ public class ControleRegistroVet {
         Visao.App.trocaTela("homeClinica");
     }
 
+    /**
+     * Função responsavel por fazer o logout do usuario e retorna-lo para a pagina de login.
+     * @param event
+     */
     @FXML
-    void irInicio(ActionEvent event) {
+    void logout(ActionEvent event) {
         textCrvm.setText("");
         textEmail.setText("");
         textNome.setText("");

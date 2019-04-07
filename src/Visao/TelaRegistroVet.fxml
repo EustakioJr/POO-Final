@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.ControleRegistroVet">
-    <Button layoutX="274.0" layoutY="278.0" mnemonicParsing="false" onAction="#avisoConclusao" text="Registrar" />
+    <Button layoutX="274.0" layoutY="278.0" mnemonicParsing="false" onAction="#cadastrar" text="Registrar" />
     <Label fx:id="labelAviso" alignment="CENTER" layoutX="199.0" layoutY="323.0" prefHeight="17.0" prefWidth="215.0" />
     <TextField fx:id="textNome" layoutX="232.0" layoutY="74.0" />
     <Label layoutX="181.0" layoutY="78.0" text="Nome:" />
@@ -22,7 +22,7 @@
     <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
         <Menu fx:id="menuHome" mnemonicParsing="false" text="Menu">
             <MenuItem fx:id="botaoHome" mnemonicParsing="false" onAction="#irHome" text="Home" />
-            <MenuItem fx:id="botaoLogout" mnemonicParsing="false" onAction="#irInicio" text="Logout" />
+            <MenuItem fx:id="botaoLogout" mnemonicParsing="false" onAction="#logout" text="Logout" />
         </Menu>
     </MenuBar>
 </AnchorPane>

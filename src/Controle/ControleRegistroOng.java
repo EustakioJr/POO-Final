@@ -11,10 +11,18 @@ import util.TextFieldFormatter;
 import java.io.IOException;
 import java.sql.SQLException;
 
+/**
+ * A classe <ControleRegistroOng> registra os ids dos elementos da interface grafica e metodos que a mesma realiza.
+ * Serve tambem para auxiliar a criação de objetos to tipo Ong.
+ * @author EustakioJr
+ * @author Alex Fernandes
+ */
 public class ControleRegistroOng {
 
     private OngDaoBanco daoOng = new OngDaoBanco();
-
+    /**
+     * IDs da interface grafica.
+     */
     @FXML
     private Button botaoCadastro;
 
@@ -42,6 +50,10 @@ public class ControleRegistroOng {
     @FXML
     private Button botaoVoltar;
 
+    /**
+     * Função que realiza a cração de objetos Ong.
+     * @param actionEvent
+     */
     public void registrar(ActionEvent actionEvent) {
 
         if (campoNome.getText().isEmpty() || campoUser.getText().isEmpty() || campoCNPJ.getText().isEmpty() || campoEndereco.getText().isEmpty() || campoSenha.getText().isEmpty() || campoTelefone.getText().isEmpty()){
@@ -71,7 +83,9 @@ public class ControleRegistroOng {
         }
     }
 
-
+    /**
+     * Função que limpa os campos após realizado o cadastro.
+     */
     public void limpar(){
         campoNome.setText("");
         campoUser.setText("");
@@ -81,6 +95,10 @@ public class ControleRegistroOng {
         campoTelefone.setText("");
     }
 
+    /**
+     * Função que retorna o usuario para a tela de seleção de tipo de cadastro.
+     * @param event
+     */
     @FXML
     void irCadastro(ActionEvent event) {
         campoCNPJ.setText("");
@@ -93,6 +111,10 @@ public class ControleRegistroOng {
         Visao.App.trocaTela("cadastro");
     }
 
+    /**
+     * Função que seta a mascara para o campo de CNPJ.
+     * @param event
+     */
     @FXML
     void mkCNPJ(KeyEvent event) {
         TextFieldFormatter tff = new TextFieldFormatter();
@@ -103,6 +125,10 @@ public class ControleRegistroOng {
         tff.formatter();
     }
 
+    /**
+     * função que seta a mascara para o campo telefone.
+     * @param event
+     */
     @FXML
     void mkTelefone(KeyEvent event) {
         TextFieldFormatter tff = new TextFieldFormatter();

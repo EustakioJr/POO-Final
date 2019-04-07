@@ -15,11 +15,19 @@ import util.TextFieldFormatter;
 import java.io.IOException;
 import java.sql.SQLException;
 
+/**
+ * A classe <ControleRegistroUsuario> registra os ids dos elementos da interface grafica e metodos que a mesma realiza.
+ * Serve tambem para auxiliar a criação de objetos to tipo Usuario.
+ * @author EustakioJr
+ * @author Alex Fernandes
+ */
 public class ControleRegistroUsuario {
 
-    UsuarioDaoBanco daoUsuario = new UsuarioDaoBanco();
+    private UsuarioDaoBanco daoUsuario = new UsuarioDaoBanco();
 
-
+    /**
+     * IDs dos campos da interface grafica
+     */
     @FXML
     private Button botaoRegistro;
 
@@ -44,6 +52,10 @@ public class ControleRegistroUsuario {
     @FXML
     private Button botaoVoltar;
 
+    /**
+     * Função que realiza o cadastro de objetos do tipo Usuario.
+     * @param event
+     */
     @FXML
     void registrar(ActionEvent event) {
 
@@ -65,6 +77,11 @@ public class ControleRegistroUsuario {
 
     }
 
+
+    /**
+     * Função que retorna o usuario para a tela de seleção de tipo de cadastro.
+     * @param event
+     */
     @FXML
     void irCadastro(ActionEvent event) {
         campoCpf.setText("");
@@ -76,6 +93,10 @@ public class ControleRegistroUsuario {
         Visao.App.trocaTela("cadastro");
     }
 
+    /**
+     * Função que seta a mascara do campo CPF.
+     * @param event
+     */
     @FXML
     void mkCpf(KeyEvent event) {
         TextFieldFormatter tff = new TextFieldFormatter();

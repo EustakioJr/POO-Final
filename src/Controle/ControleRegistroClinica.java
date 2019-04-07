@@ -11,11 +11,19 @@ import util.TextFieldFormatter;
 import java.io.IOException;
 import java.sql.SQLException;
 
+/**
+ * A classe <ControleRegistroClinica> registra os ids dos elementos da interface grafica e metodos que a mesma realiza.
+ * Serve tambem para auxiliar a criação de objetos to tipo Clinica.
+ * @author EustakioJr
+ * @author Alex Fernandes
+ */
 public class ControleRegistroClinica {
 
 
     private ClinicasDaoBanco daoOng = new ClinicasDaoBanco();
-
+    /**
+     * IDs dos campos da interface grafica
+     */
     @FXML
     private TextField campoNome;
 
@@ -43,6 +51,10 @@ public class ControleRegistroClinica {
     @FXML
     private Button botaoVoltar;
 
+    /**
+     * Função que serve para criação do objeto clinica
+     * @param event
+     */
     @FXML
     void criarCadastroClinica(ActionEvent event) {
 
@@ -75,7 +87,9 @@ public class ControleRegistroClinica {
 
     }
 
-
+    /**
+     * Função usada para resetar os campos quando realizada o cadastro com sucesso.
+     */
     public void limpar(){
         campoNome.setText("");
         campoUser.setText("");
@@ -85,6 +99,10 @@ public class ControleRegistroClinica {
         campoTelefone.setText("");
     }
 
+    /**
+     * Função que retorna o usuario para a tela de seleção de tipo de cadastro.
+     * @param event
+     */
     @FXML
     void irCadastro(ActionEvent event) {
         campoCNPJ.setText("");
@@ -97,6 +115,10 @@ public class ControleRegistroClinica {
         Visao.App.trocaTela("cadastro");
     }
 
+    /**
+     * Função que seta a mascara do campo CNPJ
+     * @param event
+     */
     @FXML
     void mkCNPJ(KeyEvent event) {
         TextFieldFormatter tff = new TextFieldFormatter();
@@ -106,7 +128,10 @@ public class ControleRegistroClinica {
         tff.setTf(campoCNPJ);
         tff.formatter();
     }
-
+    /**
+     * Função que seta a mascara do campo Telefone.
+     * @param event
+     */
     @FXML
     void mkTelefone(KeyEvent event) {
         TextFieldFormatter tff = new TextFieldFormatter();
