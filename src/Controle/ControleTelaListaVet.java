@@ -43,10 +43,19 @@ public class ControleTelaListaVet implements Initializable {
     private TextField campoEmail;
 
     @FXML
-    void alteraDados(ActionEvent event) throws SQLException, ClassNotFoundException, IOException {
-        Veterinarios vet = daoVeterinario.buscarPorCRVM(campoCrvm.getText());
+    private Label labelAviso;
 
-        daoVeterinario.atualizar(new Veterinarios(campoNome.getText(), campoTelefone.getText(), campoTelefone.getText(), campoEmail.getText()));
+    @FXML
+    void alteraDados(ActionEvent event) throws SQLException, ClassNotFoundException, IOException {
+
+        Veterinarios vet = tableVeterinarios.getSelectionModel().getSelectedItem();
+        if (vet != null){
+            Veterinarios v = daoVeterinario.buscarPorCRVM(campoCrvm.getText());
+            daoVeterinario.atualizar(new Veterinarios(v.getNome(), campoCrvm.getText(), campoTelefone.getText(), campoEmail.getText()));
+            carregarTableViewVeterinarios();
+        } else{
+            labelAviso.setText("Por favor, selecione uma veterinario da tabela");
+        }
     }
 
     @FXML

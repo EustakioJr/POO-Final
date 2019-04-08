@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e540a03c-02aa-4406-99c3-a74a462fdd42" name="Default Changelist" comment="DAO clinica incluido.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controle/ControleRegistroClinica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controle/ControleRegistroClinica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controle/ControleTelaListaOngClinica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controle/ControleTelaListaOngClinica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controle/ControleTelaListaAnimaisOng.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controle/ControleTelaListaAnimaisOng.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controle/ControleTelaListaVet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controle/ControleTelaListaVet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Visao/TelaListaOngClinica.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Visao/TelaListaOngClinica.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dao/AnimaisDaoBanco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/AnimaisDaoBanco.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Visao/TelaListaVet.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Visao/TelaListaVet.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -31,8 +30,53 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controle/ControleTelaListaVet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+            <state relative-caret-position="255">
+              <caret line="57" column="9" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Modelo/Veterinarios.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controle/ControleTelaListaAnimaisOng.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="212">
+              <caret line="136" column="9" lean-forward="true" selection-start-line="129" selection-start-column="8" selection-end-line="136" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Dao/AnimaisDaoBanco.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="790">
+              <caret line="121" column="5" selection-start-line="121" selection-start-column="5" selection-end-line="121" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controle/ControleRegistroAnimal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="470">
+              <caret line="90" column="4" selection-start-line="90" selection-start-column="4" selection-end-line="97" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,35 +125,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="241">
               <caret line="73" column="74" lean-forward="true" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Visao/TelaListaOngClinica.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-153" />
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controle/ControleTelaListaOngUser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="99" column="5" lean-forward="true" selection-start-line="56" selection-start-column="3" selection-end-line="99" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controle/ControleTelaHomeClinica.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -172,7 +187,6 @@
         <option value="$PROJECT_DIR$/src/Controle/ControleTelaListaClinicas.java" />
         <option value="$PROJECT_DIR$/src/Excecoes/DataInvalida.java" />
         <option value="$PROJECT_DIR$/src/Dao/UsuarioDaoBanco.java" />
-        <option value="$PROJECT_DIR$/src/Dao/AnimaisDaoBanco.java" />
         <option value="$PROJECT_DIR$/src/Controle/ParametroTroca.java" />
         <option value="$PROJECT_DIR$/src/Visao/UsuarioAtual.java" />
         <option value="$PROJECT_DIR$/src/Controle/ControleRegistroUsuario.java" />
@@ -193,9 +207,10 @@
         <option value="$PROJECT_DIR$/src/Controle/ControleAlteraDados.java" />
         <option value="$PROJECT_DIR$/src/Controle/ControleTelaInicial.java" />
         <option value="$PROJECT_DIR$/src/Controle/ControleRegistroAnimal.java" />
-        <option value="$PROJECT_DIR$/src/Controle/ControleTelaListaAnimaisOng.java" />
         <option value="$PROJECT_DIR$/src/Controle/ControleRegistroClinica.java" />
         <option value="$PROJECT_DIR$/src/Controle/ControleTelaListaOngClinica.java" />
+        <option value="$PROJECT_DIR$/src/Dao/AnimaisDaoBanco.java" />
+        <option value="$PROJECT_DIR$/src/Controle/ControleTelaListaAnimaisOng.java" />
         <option value="$PROJECT_DIR$/src/Controle/ControleTelaListaVet.java" />
       </list>
     </option>
@@ -264,7 +279,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554740628180" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554741283147" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Faculdade/POO/ProjetoPOO-Daniel" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -436,9 +451,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18229167" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18229167" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -447,12 +461,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32843137" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" visible="true" weight="0.27450982" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" weight="0.27450982" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39869282" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32872504" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4977307" weight="0.3251634" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.4977307" visible="true" weight="0.3251634" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50226927" side_tool="true" weight="0.32565284" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4977307" weight="0.32872504" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49924356" weight="0.3502455" />
@@ -611,13 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modelo/Veterinarios.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controle/ControleTelaListaAnimaisUser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
@@ -677,16 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dao/AnimaisDaoBanco.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="66" column="4" selection-start-line="66" selection-start-column="4" selection-end-line="86" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Dao/UsuarioAtualDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -701,16 +698,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1751">
           <caret line="109" selection-start-line="109" selection-end-line="109" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controle/ControleRegistroAnimal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="111" column="5" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -739,16 +726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controle/ControleTelaListaAnimaisOng.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1734">
-          <caret line="124" column="5" selection-end-line="124" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -806,16 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controle/ControleTelaInicial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-158">
-          <caret line="61" column="54" selection-start-line="61" selection-start-column="54" selection-end-line="61" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controle/ControleRegistroClinica.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
@@ -833,6 +800,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controle/ControleRegistroAnimal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="90" column="4" selection-start-line="90" selection-start-column="4" selection-end-line="97" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controle/ControleTelaInicial.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-158">
+          <caret line="61" column="54" selection-start-line="61" selection-start-column="54" selection-end-line="61" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dao/AnimaisDaoBanco.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="790">
+          <caret line="121" column="5" selection-start-line="121" selection-start-column="5" selection-end-line="121" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controle/ControleTelaListaAnimaisOng.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="136" column="9" lean-forward="true" selection-start-line="129" selection-start-column="8" selection-end-line="136" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Visao/TelaListaVet.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="760">
@@ -841,10 +848,17 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modelo/Veterinarios.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controle/ControleTelaListaVet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+        <state relative-caret-position="255">
+          <caret line="57" column="9" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
