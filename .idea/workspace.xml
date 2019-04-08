@@ -3,22 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e540a03c-02aa-4406-99c3-a74a462fdd42" name="Default Changelist" comment="DAO clinica incluido.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/POO-Final/Controle/ControleAlteraUsuario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/POO-Final/Controle/ControleTelaHomeUsuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/POO-Final/Controle/ControleTelaHomeUsuario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/POO-Final/Controle/ControleTelaInicial$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/POO-Final/Controle/ControleTelaInicial$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/POO-Final/Controle/ControleTelaInicial.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/POO-Final/Controle/ControleTelaInicial.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/POO-Final/Dao/UsuarioAtualDaoBanco.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/POO-Final/Dao/UsuarioAtualDaoBanco.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/POO-Final/Modelo/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/POO-Final/Modelo/Usuario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/POO-Final/Visao/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/POO-Final/Visao/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/POO-Final/Visao/TelaAlteraUsuario.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/POO-Final/Visao/TelaHomeClinica.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/POO-Final/Visao/TelaHomeClinica.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/POO-Final/Visao/TelaHomeOng.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/POO-Final/Visao/TelaHomeOng.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/POO-Final/Visao/TelaHomeUsuario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/POO-Final/Visao/TelaHomeUsuario.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controle/ControleAlteraDados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controle/ControleAlteraDados.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controle/ControleTelaHomeUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controle/ControleTelaHomeUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dao/ClinicasDaoBanco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/ClinicasDaoBanco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dao/UsuarioAtualDaoBanco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/UsuarioAtualDaoBanco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modelo/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modelo/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Visao/TelaCadastro.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Visao/TelaCadastro.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,8 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controle/ControleAlteraDados.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="58" column="44" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
+            <state relative-caret-position="238">
+              <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -270,7 +255,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554727888982" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554728294724" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Faculdade/POO/ProjetoPOO-Daniel" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -442,9 +427,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.18229167" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18229167" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -453,12 +437,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32843137" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4977307" visible="true" weight="0.2761438" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" weight="0.2761438" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39869282" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32872504" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4977307" weight="0.32565284" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.4977307" visible="true" weight="0.3251634" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50226927" side_tool="true" weight="0.32565284" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4977307" weight="0.32872504" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49924356" weight="0.35176653" />
@@ -850,8 +834,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controle/ControleAlteraDados.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="58" column="44" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
+        <state relative-caret-position="238">
+          <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
         </state>
       </provider>
     </entry>
