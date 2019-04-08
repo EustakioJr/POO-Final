@@ -12,63 +12,32 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.ControleTelaListaOngClinica">
-<<<<<<< HEAD
-    <children>
-        <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-        <TableView fx:id="tableOng" layoutX="257.0" layoutY="66.0" prefHeight="320.0" prefWidth="343.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="257.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="66.0">
-            <columns>
-                <TableColumn fx:id="colCnpj" prefWidth="172.0" text="CNPJ" />
-                <TableColumn fx:id="colNome" prefWidth="169.0" text="Razão Social" />
-            </columns>
-        </TableView>
-        <Label layoutX="401.0" layoutY="32.0" text="ONGs">
-            <font>
-                <Font name="Arial Black" size="18.0" />
-            </font>
-        </Label>
-        <ImageView fitHeight="150.0" fitWidth="100.0" layoutX="81.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../img/institute.png" />
-            </image>
-        </ImageView>
-        <Label layoutX="14.0" layoutY="183.0" text="CNPJ:" />
-        <Label layoutX="16.0" layoutY="209.0" text="Razão Social:" />
-        <Label layoutX="13.0" layoutY="264.0" text="Endereço:" />
-        <Label layoutX="14.0" layoutY="235.0" text="Telefone:" />
-        <Label fx:id="labelEndereco" alignment="TOP_LEFT" layoutX="93.0" layoutY="264.0" prefHeight="75.0" prefWidth="145.0" text="???" />
-        <Label fx:id="labelNome" layoutX="93.0" layoutY="209.0" text="???" />
-        <Label fx:id="labelTelefone" layoutX="93.0" layoutY="235.0" text="???" />
-        <Label fx:id="labelCnpj" layoutX="93.0" layoutY="183.0" text="???" />
-        <Button layoutX="13.0" layoutY="13.0" mnemonicParsing="false" onAction="#irHome" text="Voltar" />
-    </children>
-=======
    <children>
        <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-       <TableView fx:id="tableOng" layoutX="270.0" layoutY="66.0" prefHeight="320.0" prefWidth="330.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="66.0">
+       <TableView fx:id="tableOng" layoutX="257.0" layoutY="66.0" prefHeight="320.0" prefWidth="343.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="257.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="66.0">
          <columns>
-            <TableColumn fx:id="colCnpj" prefWidth="136.0" text="CNPJ" />
-            <TableColumn fx:id="colNome" prefWidth="223.0" text="Razao" />
+            <TableColumn fx:id="colCnpj" prefWidth="172.0" text="CNPJ" />
+            <TableColumn fx:id="colNome" prefWidth="169.0" text="Razão Social" />
          </columns>
       </TableView>
-      <Label layoutX="383.0" layoutY="29.0" text="ONGs">
+      <Label layoutX="401.0" layoutY="32.0" text="ONGs">
          <font>
-            <Font name="Arial Black" size="24.0" />
+            <Font name="Arial Black" size="18.0" />
          </font>
       </Label>
-      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="85.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="100.0" layoutX="81.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/institute.png" />
          </image>
       </ImageView>
-      <Label layoutX="54.0" layoutY="192.0" text="CNPJ:" />
-      <Label layoutX="16.0" layoutY="222.0" text="Razão Social:" />
-      <Label layoutX="34.0" layoutY="282.0" text="Endereço:" />
-      <Label layoutX="36.0" layoutY="254.0" text="Telefone:" />
-      <TextField editable="false" layoutX="91.0" layoutY="188.0" />
-      <TextField editable="false" layoutX="91.0" layoutY="218.0" />
-      <TextField editable="false" layoutX="91.0" layoutY="248.0" />
-      <TextField editable="false" layoutX="91.0" layoutY="278.0" />
-      <Button layoutX="16.0" layoutY="17.0" mnemonicParsing="false" onAction="#irHome" text="Voltar" />
+      <Label layoutX="14.0" layoutY="183.0" text="CNPJ:" />
+      <Label layoutX="16.0" layoutY="209.0" text="Razão Social:" />
+      <Label layoutX="13.0" layoutY="264.0" text="Endereço:" />
+      <Label layoutX="14.0" layoutY="235.0" text="Telefone:" />
+      <Label fx:id="labelEndereco" alignment="TOP_LEFT" layoutX="93.0" layoutY="264.0" prefHeight="75.0" prefWidth="145.0" text="???" />
+      <Label fx:id="labelNome" layoutX="93.0" layoutY="209.0" text="???" />
+      <Label fx:id="labelTelefone" layoutX="93.0" layoutY="235.0" text="???" />
+      <Label fx:id="labelCnpj" layoutX="93.0" layoutY="183.0" text="???" />
+      <Button layoutX="13.0" layoutY="13.0" mnemonicParsing="false" onAction="#irHome" text="Voltar" />
    </children>
->>>>>>> 9b8c91db2d618fb743e102a2651acb52aa09b974
 </AnchorPane>
