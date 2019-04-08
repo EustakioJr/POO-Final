@@ -29,7 +29,7 @@ public class App extends Application {
     private static Scene telaListaVet;
     private static Scene telaListaAnimalUser;
     private static Scene telaListaAnimalOng;
-    private static Scene telaAlteraDadosUser;
+    private static Scene telaAlteraDados;
 
 
     @Override
@@ -107,8 +107,8 @@ public class App extends Application {
         telaListaAnimalOng = new Scene(fxmlTelaListaAnimalOng, 600, 400);
 
         //Cria a Tela de alteração de dados de usuario
-        Parent fxmlAlteraUsuario = FXMLLoader.load(getClass().getResource("TelaAlteraUsuario.fxml"));
-        telaAlteraDadosUser = new Scene(fxmlAlteraUsuario, 600, 400);
+        Parent fxmlAlteraDados = FXMLLoader.load(getClass().getResource("TelaAlteraDados.fxml"));
+        telaAlteraDados = new Scene(fxmlAlteraDados, 600, 400);
 
         //Seta a tela que sera mostrada ao iniciar o aplicativo
         PrimaryStage.setScene(telaInicio);
@@ -170,8 +170,8 @@ public class App extends Application {
             case "listaAnimalOng":
                 stage.setScene(telaListaAnimalOng);
                 break;
-            case "alteraUser":
-                stage.setScene(telaAlteraDadosUser);
+            case "alteraDados":
+                stage.setScene(telaAlteraDados);
         }
     }
 

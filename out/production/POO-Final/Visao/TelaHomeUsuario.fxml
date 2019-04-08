@@ -29,7 +29,7 @@
             <Image url="@../img/adoption.png" />
          </image>
       </ImageView>
-      <SplitMenuButton layoutX="515.0" layoutY="15.0" mnemonicParsing="false" text="Opções">
+      <SplitMenuButton layoutX="515.0" layoutY="15.0" mnemonicParsing="false" text="Perfil">
         <items>
           <MenuItem fx:id="btAlterar" mnemonicParsing="false" onAction="#alteraDados" text="Alterar" />
           <MenuItem fx:id="btLogout" mnemonicParsing="false" text="Sair" />
