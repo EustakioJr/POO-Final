@@ -42,4 +42,5 @@ public class ControleAlteraUsuario {
 
     }
 
+    public void irHomeUser(ActionEvent actionEvent) {Visao.App.trocaTela("homeUsuario");}
 }

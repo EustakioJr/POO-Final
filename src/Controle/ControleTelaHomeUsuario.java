@@ -29,9 +29,7 @@ public class ControleTelaHomeUsuario {
     private Button botaoListaAnimais;
 
     @FXML
-    void irListaAnimais(ActionEvent event) {
-        Visao.App.trocaTela("telaAnimal");
-    }
+    void irListaAnimais(ActionEvent event) { Visao.App.trocaTela("listaAnimalUser"); }
 
     @FXML
     void irListaClinica(ActionEvent event) {
@@ -44,7 +42,7 @@ public class ControleTelaHomeUsuario {
     }
 
     @FXML
-    void alteraDados(ActionEvent event) {
+    void alteraDados(ActionEvent event) {Visao.App.trocaTela("alteraUser");
     }
 
     @FXML
