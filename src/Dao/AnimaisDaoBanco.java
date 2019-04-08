@@ -120,5 +120,4 @@ public class AnimaisDaoBanco implements AnimaisDao {
             return false;
         }
     }
-
 }

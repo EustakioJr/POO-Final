@@ -129,11 +129,20 @@ public class ControleTelaListaAnimaisOng implements Initializable {
 
         Animais animais = tableAnimais.getSelectionModel().getSelectedItem();
         if (animais != null){
-//            daoAnimais.atualizar(animais.getId(), campoNome.getText(), campoEspecie.getText(), dataNasc.setValue(), );
-            daoAnimais.atualizar(animais);
+            Animais a = daoAnimais.buscarPorId(labelId.getText());
+            daoAnimais.atualizar(new Animais(a.getId(), campoNome.getText(), campoEspecie.getText(), a.getOngPertencente(), dataNasc.getValue(), verifChecked()));
             carregarTableViewAnimais();
         } else{
             labelAviso.setText("Por favor, selecione uma pet da tabela");
+        }
+    }
+
+    public boolean verifChecked(){
+
+        if (checkCastrado.selectedProperty().getValue()) {
+            return true;
+        } else {
+            return false;
         }
     }
 

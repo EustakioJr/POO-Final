@@ -98,20 +98,59 @@ public class ControleAlteraDados {
                 default:
                     System.out.println("Não foi reconhecido!");
             }
-        }else{
+
+            //Volta para a home
+            switch (ua.getUseratual()){
+                case "USUARIO":
+                    Visao.App.trocaTela("homeUsuario");
+                    break;
+                case "ONG":
+                    Visao.App.trocaTela("homeOng");
+                    break;
+                case "CLINICA":
+                    Visao.App.trocaTela("homeClinica");
+                    break;
+            }
+        }else {
             labelAviso.setText("Senha nova incorreta");
         }
 
     }
 
     @FXML
-    void excluir(ActionEvent event) {
-
+    void excluir(ActionEvent event) throws SQLException, ClassNotFoundException, IOException {
+        UsuarioAtual ua = daoUA.buscarPorPadrao("padrao");
+        switch (ua.getUseratual()){
+            case "USUARIO":
+                Usuario u = daoUsuario.buscarPorUsername(ua.getUseratual());
+                daoUsuario.deletar(u);
+                break;
+            case "ONG":
+                Ong o = daoOng.buscarPorUsername(ua.getUseratual());
+                daoOng.deletar(o);
+                break;
+            case "CLINICA":
+                Clinicas c = daoClinica.buscarPorUsername(ua.getUseratual());
+                daoClinica.deletar(c);
+                break;
+        }
+        Visao.App.trocaTela("inicio");
     }
 
     @FXML
-    void irHomeUser(ActionEvent event){
-
+    void irHomeUser(ActionEvent event) throws SQLException, ClassNotFoundException {
+        UsuarioAtual ua = daoUA.buscarPorPadrao("padrao");
+        switch (ua.getUseratual()){
+            case "USUARIO":
+                Visao.App.trocaTela("homeUsuario");
+                break;
+            case "ONG":
+                Visao.App.trocaTela("homeOng");
+                break;
+            case "CLINICA":
+                Visao.App.trocaTela("homeClinica");
+                break;
+        }
     }
 
 }

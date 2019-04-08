@@ -43,24 +43,26 @@ public class ControleTelaListaVet implements Initializable {
     private TextField campoEmail;
 
     @FXML
-    private Button botaoAltera;
+    private Label labelAviso;
 
     @FXML
-    private Button botaoDeleta;
+    void alteraDados(ActionEvent event) throws SQLException, ClassNotFoundException, IOException {
 
-    @FXML
-    void alteraDados(ActionEvent event) {
-
+        Veterinarios vet = tableVeterinarios.getSelectionModel().getSelectedItem();
+        if (vet != null){
+            Veterinarios v = daoVeterinario.buscarPorCRVM(campoCrvm.getText());
+            daoVeterinario.atualizar(new Veterinarios(v.getNome(), campoCrvm.getText(), campoTelefone.getText(), campoEmail.getText()));
+            carregarTableViewVeterinarios();
+        } else{
+            labelAviso.setText("Por favor, selecione uma veterinario da tabela");
+        }
     }
 
     @FXML
-    void deletarVet(ActionEvent event) {
+    void deletarVet(ActionEvent event) throws SQLException, ClassNotFoundException, IOException {
+        Veterinarios vet = daoVeterinario.buscarPorCRVM(campoCrvm.getText());
 
-    }
-
-    @FXML
-    void irInicio(ActionEvent event) {
-        Visao.App.trocaTela("inicio");
+        daoVeterinario.deletar(vet);
     }
 
     @FXML
@@ -113,4 +115,7 @@ public class ControleTelaListaVet implements Initializable {
     }
 
 
+    public void atualizar(ActionEvent actionEvent) throws SQLException, IOException, ClassNotFoundException {
+        carregarTableViewVeterinarios();
+    }
 }

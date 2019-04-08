@@ -25,6 +25,7 @@ public class ControleTelaListaOngClinica implements Initializable {
 
     @FXML
     private Label labelCnpj;
+<<<<<<< HEAD
 
     @FXML
     private Label labelNome;
@@ -43,7 +44,26 @@ public class ControleTelaListaOngClinica implements Initializable {
 
     @FXML
     private TableColumn<Ong, String> colNome;
+=======
 
+    @FXML
+    private Label labelNome;
+
+    @FXML
+    private Label labelTelefone;
+
+    @FXML
+    private Label labelEndereco;
+>>>>>>> 9b8c91db2d618fb743e102a2651acb52aa09b974
+
+    @FXML
+    private TableView<Ong> tableOng;
+
+    @FXML
+    private TableColumn<Ong, String> colCnpj;
+
+    @FXML
+    private TableColumn<Ong, String> colNome;
     @FXML
     void irHome(ActionEvent event) {
         Visao.App.trocaTela("homeClinica");
@@ -63,6 +83,7 @@ public class ControleTelaListaOngClinica implements Initializable {
         try {
             carregarTableViewOng();
 
+<<<<<<< HEAD
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
@@ -72,6 +93,12 @@ public class ControleTelaListaOngClinica implements Initializable {
         }
 
 
+=======
+        } catch (SQLException | ClassNotFoundException | IOException e) {
+            e.printStackTrace();
+        }
+
+>>>>>>> 9b8c91db2d618fb743e102a2651acb52aa09b974
         tableOng.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> selectItemOngs(newValue));
     }
 
