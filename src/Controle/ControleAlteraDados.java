@@ -110,8 +110,19 @@ public class ControleAlteraDados {
     }
 
     @FXML
-    void irHomeUser(ActionEvent event){
-
+    void irHomeUser(ActionEvent event) throws SQLException, ClassNotFoundException {
+        UsuarioAtual ua = daoUA.buscarPorPadrao("padrao");
+        switch (ua.getUseratual()){
+            case "USUARIO":
+                Visao.App.trocaTela("homeUsuario");
+                break;
+            case "ONG":
+                Visao.App.trocaTela("homeOng");
+                break;
+            case "CLINICA":
+                Visao.App.trocaTela("homeClinica");
+                break;
+        }
     }
 
 }

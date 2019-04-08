@@ -34,10 +34,10 @@
       <Label layoutX="16.0" layoutY="222.0" text="Razão Social:" />
       <Label layoutX="34.0" layoutY="282.0" text="Endereço:" />
       <Label layoutX="36.0" layoutY="254.0" text="Telefone:" />
-      <TextField layoutX="91.0" layoutY="188.0" />
-      <TextField layoutX="91.0" layoutY="218.0" />
-      <TextField layoutX="91.0" layoutY="248.0" />
-      <TextField layoutX="91.0" layoutY="278.0" />
+      <TextField editable="false" layoutX="91.0" layoutY="188.0" />
+      <TextField editable="false" layoutX="91.0" layoutY="218.0" />
+      <TextField editable="false" layoutX="91.0" layoutY="248.0" />
+      <TextField editable="false" layoutX="91.0" layoutY="278.0" />
       <Button layoutX="16.0" layoutY="17.0" mnemonicParsing="false" onAction="#irHome" text="Voltar" />
    </children>
 </AnchorPane>
