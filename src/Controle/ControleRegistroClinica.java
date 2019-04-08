@@ -69,19 +69,10 @@ public class ControleRegistroClinica {
                         campoTelefone.getText(),
                         campoSenha.getText()
                         ))){
-                    Alert alerta = new Alert(Alert.AlertType.INFORMATION);
-                    alerta.setTitle("Clinica cadastrada!");
-                    alerta.setHeaderText("A sua ONG foi cadastrada!");
-                    alerta.show();
-                    limpar();
-//                    labelAviso.setText("ONG registrado");
+                   labelAviso.setText("Clínica registrada!");
                 }else labelAviso.setText("ERRO! ONG não registrado");
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
+            } catch (SQLException | ClassNotFoundException | IOException e) {
+                labelAviso.setText("Dados inválidos!");;
             }
         }
 
