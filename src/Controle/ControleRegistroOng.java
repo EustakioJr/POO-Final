@@ -66,17 +66,12 @@ public class ControleRegistroOng {
                                 campoEndereco.getText(),
                                 campoSenha.getText(),
                                 campoTelefone.getText()))){
-                    Alert alerta = new Alert(Alert.AlertType.INFORMATION);
-                    alerta.setTitle("Cadastrado com Sucesso!");
-                    alerta.setHeaderText("A sua ONG foi cadastrada!");
-                    alerta.show();
-                    limpar();
-//                    labelAviso.setText("ONG registrado");
-                }else labelAviso.setText("ERRO! ONG não registrado");
+
+                    labelAviso.setText("ONG cadastrada!");
+                }else labelAviso.setText("Cadastro impossível!");
             } catch (IOException e) {
-                e.printStackTrace();
             } catch (SQLException e) {
-                e.printStackTrace();
+                labelAviso.setText("CNPJ ou UserName já existem!");
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             }

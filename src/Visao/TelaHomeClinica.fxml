@@ -15,10 +15,10 @@
        <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0" />
        <Button fx:id="botaoListaOng" layoutX="54.0" layoutY="265.0" mnemonicParsing="false" onAction="#irListaOng" prefHeight="25.0" prefWidth="130.0" text="ONGs" />
        <Button fx:id="botaoListaVet" layoutX="235.0" layoutY="265.0" mnemonicParsing="false" onAction="#irListaVet" prefWidth="130.0" text="Listar Veterinários" />
-      <Button fx:id="botaoAdicionaVet" layoutX="397.0" layoutY="265.0" mnemonicParsing="false" onAction="#irCadastroVet" prefWidth="130.0" text="Adicionar Veterinários" />
+      <Button fx:id="botaoAdicionaVet" layoutX="390.0" layoutY="265.0" mnemonicParsing="false" onAction="#irCadastroVet" prefHeight="25.0" prefWidth="138.0" text="Adicionar Veterinários" />
       <MenuButton layoutX="527.0" layoutY="15.0" mnemonicParsing="false" text="Perfil">
         <items>
-          <MenuItem mnemonicParsing="false" onAction="#irAlterar" text="Alterar dados" />
+          <MenuItem mnemonicParsing="false" onAction="#irAlterar" text="Alterar senha" />
           <MenuItem mnemonicParsing="false" onAction="#logout" text="Sair" />
         </items>
       </MenuButton>
