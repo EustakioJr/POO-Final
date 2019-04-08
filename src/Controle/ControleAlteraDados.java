@@ -35,12 +35,12 @@ public class ControleAlteraDados {
     }
 
     @FXML
-    void excluirUsuario(ActionEvent event) {
+    void excluir(ActionEvent event) {
 
     }
 
     @FXML
-    void irHomeUser(ActionEvent event) {
+    void irHome(ActionEvent event) {
 
     }
 
