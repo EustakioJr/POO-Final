@@ -39,6 +39,24 @@ public class UsuarioAtualDaoBanco implements UsuarioAtualDao {
         }
     }
 
+    public UsuarioAtual buscarPorPadrao(String p) throws SQLException, ClassNotFoundException {
+        try(Connection connection = factory.getConnection()){
+            PreparedStatement statement = connection.prepareStatement(
+                    "SELECT * FROM USERATUAL WHERE PADRAO = ?"
+            );
+
+            statement.setString(1, p);
+
+            ResultSet resultSet = statement.executeQuery();
+
+            if (resultSet.next()){
+                String user = resultSet.getString("usera");
+                String tipo = resultSet.getString("tipo");
+
+                return new UsuarioAtual(user, tipo);
+            }else return null;
+        }
+    }
 
     public boolean atualizar(UsuarioAtual userA) throws IOException, ClassNotFoundException, SQLException {
         try (Connection connection = factory.getConnection()) {
@@ -48,8 +66,8 @@ public class UsuarioAtualDaoBanco implements UsuarioAtualDao {
                             "WHERE padrao = ?"
             );
             String p = "padrao";
-            statement.setString(1, userA.getTipo());
-            statement.setString(2, userA.getUseratual());
+            statement.setString(1, userA.getUseratual());
+            statement.setString(2, userA.getTipo());
             statement.setString(3, p);
 
             return statement.executeUpdate() > 0;
