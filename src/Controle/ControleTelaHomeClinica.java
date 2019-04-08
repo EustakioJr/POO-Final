@@ -31,7 +31,7 @@ public class ControleTelaHomeClinica {
 
     @FXML
     void irAlterar(ActionEvent event) {
-
+        Visao.App.trocaTela("alteraDados");
     }
 
     @FXML

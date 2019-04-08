@@ -30,7 +30,7 @@ public class ControleTelaHomeOng {
 
     @FXML
     void irAlterar(ActionEvent event) {
-
+        Visao.App.trocaTela("alteraDados");
     }
 
     @FXML
