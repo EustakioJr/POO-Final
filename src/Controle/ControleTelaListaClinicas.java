@@ -60,6 +60,7 @@ public class ControleTelaListaClinicas implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         try {
             carregarTableViewAnimais();
+
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
