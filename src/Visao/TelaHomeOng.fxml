@@ -18,7 +18,7 @@
       <Button fx:id="botaoAdicionaAnimal" layoutX="397.0" layoutY="265.0" mnemonicParsing="false" onAction="#irCadastroAnimal" prefWidth="130.0" text="Adicionar animais" />
       <MenuButton layoutX="527.0" layoutY="15.0" mnemonicParsing="false" text="Perfil">
         <items>
-          <MenuItem mnemonicParsing="false" onAction="#irAlterar" text="Alterar dados" />
+          <MenuItem mnemonicParsing="false" onAction="#irAlterar" text="Alterar senha" />
           <MenuItem mnemonicParsing="false" onAction="#logout" text="Sair" />
         </items>
       </MenuButton>

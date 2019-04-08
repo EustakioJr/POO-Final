@@ -70,7 +70,7 @@ public class ControleRegistroClinica {
                         campoSenha.getText()
                         ))){
                     Alert alerta = new Alert(Alert.AlertType.INFORMATION);
-                    alerta.setTitle("Cadastrado com Sucesso!");
+                    alerta.setTitle("Clinica cadastrada!");
                     alerta.setHeaderText("A sua ONG foi cadastrada!");
                     alerta.show();
                     limpar();
