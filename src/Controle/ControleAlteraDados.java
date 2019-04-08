@@ -63,6 +63,7 @@ public class ControleAlteraDados {
                         String novaS = novaSenha.getText();
                         if (daoUsuario.atualizar(new Usuario(u.getNome(), u.getUsername(), u.getCpf(), u.getNascimento(), novaS))){
                             labelAviso.setText("Senha Alterada!");
+                            Visao.App.trocaTela("homeUsuario");
                         }
                     } else {
                         labelAviso.setText("Senha atual invalida");
@@ -75,6 +76,7 @@ public class ControleAlteraDados {
                         String novaS = novaSenha.getText();
                         if (daoOng.atualizar(new Ong(o.getNomeOng(), o.getUsername(), o.getCnpj(), o.getEndereco(), novaS, o.getTelefone()))){
                             labelAviso.setText("Senha Alterada!");
+                            Visao.App.trocaTela("homeOng");
                         }
                     } else {
                         labelAviso.setText("Senha atual invalida");
@@ -87,6 +89,7 @@ public class ControleAlteraDados {
                         String novaS = novaSenha.getText();
                         if (daoClinica.atualizar(new Clinicas(c.getNome(), c.getUsername(), c.getEndereco(), c.getCnpj(), c.getTelefone(), novaS))){
                             labelAviso.setText("Senha Alterada!");
+                            Visao.App.trocaTela("homeClinica");
                         }
                     } else {
                         labelAviso.setText("Senha atual invalida");
@@ -107,8 +110,19 @@ public class ControleAlteraDados {
     }
 
     @FXML
-    void irHome(ActionEvent event) {
-
+    void irHome(ActionEvent event) throws SQLException, ClassNotFoundException {
+        UsuarioAtual ua = daoUA.buscarPorPadrao("padrao");
+        String tUser = ua.getTipo();
+        switch (tUser){
+            case "USUARIO":
+                Visao.App.trocaTela("homeUsuario");
+                break;
+            case "ONG":
+                Visao.App.trocaTela("homeOng");
+                break;
+            case "CLINICA":
+                Visao.App.trocaTela("homeClinica");
+        }
     }
 
 }
