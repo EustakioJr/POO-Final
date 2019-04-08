@@ -49,49 +49,56 @@ public class ControleAlteraDados {
     @FXML
     void atualizar(ActionEvent event) throws SQLException, ClassNotFoundException, DataInvalida, IOException {
 
-        String sAtual= campoSenha.getText();
-        UsuarioAtual ua = daoUA.buscarPorPadrao("padrao");
-        String tUser = ua.getTipo();
-        System.out.println(tUser);
-        switch (tUser){
-            case "USUARIO":
-                Usuario u = daoUsuario.buscarPorUsername(ua.getUseratual());
-                String sUser = u.getSenha();
-                if (sUser.equals(sAtual)){
+        if (novaSenha.getText().equals(confirmaSenha.getText())){
+            String sAtual= campoSenha.getText();
+            UsuarioAtual ua = daoUA.buscarPorPadrao("padrao");
+            String tUser = ua.getTipo();
+            System.out.println(tUser);
+            switch (tUser){
+                case "USUARIO":
+                    Usuario u = daoUsuario.buscarPorUsername(ua.getUseratual());
+                    String sUserU = u.getSenha();
+                    if (sUserU.equals(sAtual)){
 
-                    String novaS = novaSenha.getText();
-                    if (daoUsuario.atualizar(new Usuario(u.getNome(), u.getUsername(), u.getCpf(), u.getNascimento(), novaS))){
-                        labelAviso.setText("Senha Alterada!");
+                        String novaS = novaSenha.getText();
+                        if (daoUsuario.atualizar(new Usuario(u.getNome(), u.getUsername(), u.getCpf(), u.getNascimento(), novaS))){
+                            labelAviso.setText("Senha Alterada!");
+                        }
+                    } else {
+                        labelAviso.setText("Senha atual invalida");
                     }
-                } else {
-                    labelAviso.setText("Senha atual invalida");
-                }
-                break;
-            case "ONG":
-                Ong o = daoOng.buscarPorUsername(ua.getUseratual());
-                if (o.getSenha() == sAtual){
-                    String novaS = novaSenha.getText();
-                    if (daoOng.atualizar(new Ong(o.getNomeOng(), o.getUsername(), o.getCnpj(), o.getEndereco(), novaS, o.getTelefone()))){
-                        labelAviso.setText("Senha Alterada!");
+                    break;
+                case "ONG":
+                    Ong o = daoOng.buscarPorUsername(ua.getUseratual());
+                    String sUserO = o.getSenha();
+                    if (sUserO.equals(sAtual)){
+                        String novaS = novaSenha.getText();
+                        if (daoOng.atualizar(new Ong(o.getNomeOng(), o.getUsername(), o.getCnpj(), o.getEndereco(), novaS, o.getTelefone()))){
+                            labelAviso.setText("Senha Alterada!");
+                        }
+                    } else {
+                        labelAviso.setText("Senha atual invalida");
                     }
-                } else {
-                    labelAviso.setText("Senha atual invalida");
-                }
-                break;
-            case "CLINICA":
-                Clinicas c = daoClinica.buscarPorUsername(ua.getUseratual());
-                if (c.getSenha() == sAtual){
-                    String novaS = novaSenha.getText();
-                    if (daoClinica.atualizar(new Clinicas(c.getNome(), c.getUsername(), c.getEndereco(), c.getCnpj(), c.getTelefone(), novaS))){
-                        labelAviso.setText("Senha Alterada!");
+                    break;
+                case "CLINICA":
+                    Clinicas c = daoClinica.buscarPorUsername(ua.getUseratual());
+                    String sUserC = c.getSenha();
+                    if (sUserC.equals(sAtual)){
+                        String novaS = novaSenha.getText();
+                        if (daoClinica.atualizar(new Clinicas(c.getNome(), c.getUsername(), c.getEndereco(), c.getCnpj(), c.getTelefone(), novaS))){
+                            labelAviso.setText("Senha Alterada!");
+                        }
+                    } else {
+                        labelAviso.setText("Senha atual invalida");
                     }
-                } else {
-                    labelAviso.setText("Senha atual invalida");
-                }
-                break;
-            default:
-                System.out.println("Não foi reconhecido!");
+                    break;
+                default:
+                    System.out.println("Não foi reconhecido!");
+            }
+        }else{
+            labelAviso.setText("Senha nova incorreta");
         }
+
     }
 
     @FXML
