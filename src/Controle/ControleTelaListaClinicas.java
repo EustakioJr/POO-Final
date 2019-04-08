@@ -70,7 +70,7 @@ public class ControleTelaListaClinicas implements Initializable {
         }
 
 
-        tableClinicas.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> selectItemAnimais(newValue));
+        tableClinicas.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> selectItemClinicas(newValue));
     }
 
     public void carregarTableViewAnimais() throws SQLException, ClassNotFoundException, IOException {
@@ -83,7 +83,7 @@ public class ControleTelaListaClinicas implements Initializable {
         tableClinicas.setItems(observableListClinicas);
     }
 
-    public void selectItemAnimais(Clinicas clinicas) {
+    public void selectItemClinicas(Clinicas clinicas) {
         if (clinicas != null) {
             campoCnpj.setText(clinicas.getCnpj());
             campoNome.setText(clinicas.getNome());
