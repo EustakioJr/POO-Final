@@ -30,7 +30,7 @@ public class ControleTelaHomeUsuario {
 
     @FXML
     void irListaAnimais(ActionEvent event) {
-        Visao.App.trocaTela("telaAnimal", Visao.App.notifyAllListeners().get;);
+        Visao.App.trocaTela("telaAnimal");
     }
 
     @FXML

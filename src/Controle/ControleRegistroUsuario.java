@@ -2,7 +2,6 @@ package Controle;
 
 import Dao.UsuarioDaoBanco;
 import Modelo.Usuario;
-import Visao.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -123,13 +122,6 @@ public class ControleRegistroUsuario implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        App.addOnChangeScreenListener(new App.OnChangeScreen() {
-            @Override
-            public void onScreenChanged(String novaTela, String usuario, String tipo) {
-                System.out.println("Nova tela:"+ novaTela +", " + usuario + ", "+ tipo);
-            }
-        });{
 
-        }
     }
 }
