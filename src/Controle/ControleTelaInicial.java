@@ -45,11 +45,6 @@ public class ControleTelaInicial {
     }
 
     @FXML
-    void irTelaLogin(ActionEvent event) {
-        Visao.App.trocaTela("login");
-    }
-
-    @FXML
     void login(ActionEvent event) {
         if (campoUser.getText().isEmpty() || campoSenha.getText().isEmpty()) {
             labelAviso.setText("Preenchar todos os camopos");
