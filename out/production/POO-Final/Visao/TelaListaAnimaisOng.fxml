@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import javafx.scene.image.*?>
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.ControleTelaListaAnimaisOng">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.ControleTelaListaAnimaisOng">
    <children>
        <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
        <TableView fx:id="tableAnimais" layoutX="276.0" layoutY="40.0" prefHeight="332.0" prefWidth="324.0" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="276.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
@@ -32,10 +33,10 @@
       <Label fx:id="labelNome" layoutX="52.0" layoutY="161.0" text="Nome:" />
       <Label fx:id="labelEspe" layoutX="49.0" layoutY="191.0" text="Especie:" />
       <Label layoutX="25.0" layoutY="220.0" text="Nascimento:" />
-      <TextField fx:id="campoNome" disable="true" layoutX="92.0" layoutY="157.0" />
-      <TextField fx:id="campoEspecie" disable="true" layoutX="92.0" layoutY="187.0" />
-      <DatePicker fx:id="dataNasc" disable="true" layoutX="92.0" layoutY="216.0" prefHeight="20.0" prefWidth="150.0" />
-      <CheckBox fx:id="checkCastrado" disable="true" layoutX="89.0" layoutY="248.0" mnemonicParsing="false" text="Castrado" />
+      <TextField fx:id="campoNome" layoutX="92.0" layoutY="157.0" />
+      <TextField fx:id="campoEspecie" layoutX="92.0" layoutY="187.0" />
+      <DatePicker fx:id="dataNasc" layoutX="92.0" layoutY="216.0" prefHeight="20.0" prefWidth="150.0" />
+      <CheckBox fx:id="checkCastrado" layoutX="89.0" layoutY="248.0" mnemonicParsing="false" text="Castrado" />
       <Button fx:id="btVoltar" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#irMenu" text="Voltar" />
        <Button fx:id="botaoAltera" layoutX="98.0" layoutY="271.0" mnemonicParsing="false" onAction="#alteraDados" text="Alterar dados" />
        <Button fx:id="botaoDeleta" layoutX="115.0" layoutY="303.0" mnemonicParsing="false" onAction="#deletarAnimal" text="Deletar" />
@@ -44,5 +45,6 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
+      <Button layoutX="523.0" layoutY="13.0" mnemonicParsing="false" onAction="#btAtualizar" text="Atualizar" />
    </children>
 </AnchorPane>

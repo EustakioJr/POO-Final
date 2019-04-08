@@ -58,8 +58,8 @@ public class ControleTelaInicial implements Initializable {
 
     @FXML
     void login(ActionEvent event) {
-        if (campoUser.getText().isEmpty() || campoSenha.getText().isEmpty()) {
-            labelAviso.setText("Preenchar todos os camopos");
+        if (campoUser.getText().isEmpty() || campoSenha.getText().isEmpty() ||campoTipo.getValue() == null) {
+            labelAviso.setText("Preenchar todos os campos");
         } else{
             switch (campoTipo.getValue()){
                 case ONG:
@@ -74,7 +74,7 @@ public class ControleTelaInicial implements Initializable {
                             labelAviso.setText("Dados invalidos");
                         }
                     } catch (SQLException | IOException e) {
-                        e.printStackTrace();
+                        labelAviso.setText("Username ou senha incorreto");
                     } catch (ClassNotFoundException e) {
                         e.printStackTrace();
                     }
@@ -93,7 +93,7 @@ public class ControleTelaInicial implements Initializable {
                             labelAviso.setText("Dados invalidos");
                         }
                     } catch (SQLException e) {
-                        e.printStackTrace();
+                        labelAviso.setText("Username ou senha incorreto");
                     } catch (ClassNotFoundException e) {
                         e.printStackTrace();
                     } catch (IOException e) {
@@ -115,7 +115,7 @@ public class ControleTelaInicial implements Initializable {
                             labelAviso.setText("Dados invalidos");
                         }
                     } catch (SQLException e) {
-                        e.printStackTrace();
+                        labelAviso.setText("Username ou senha incorreto");
                     } catch (ClassNotFoundException e) {
                         e.printStackTrace();
                     } catch (IOException e) {

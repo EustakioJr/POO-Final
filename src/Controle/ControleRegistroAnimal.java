@@ -55,6 +55,8 @@ public class ControleRegistroAnimal {
     @FXML
     private MenuItem botaoLogout;
 
+
+
     /**
      * Função que serve para criação do objeto animal.
      * @param actionEvent

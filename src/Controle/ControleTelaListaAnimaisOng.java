@@ -129,6 +129,7 @@ public class ControleTelaListaAnimaisOng implements Initializable {
 
         Animais animais = tableAnimais.getSelectionModel().getSelectedItem();
         if (animais != null){
+//            daoAnimais.atualizar(animais.getId(), campoNome.getText(), campoEspecie.getText(), dataNasc.setValue(), );
             daoAnimais.atualizar(animais);
             carregarTableViewAnimais();
         } else{
@@ -146,5 +147,9 @@ public class ControleTelaListaAnimaisOng implements Initializable {
         }else{
             labelAviso.setText("Por favor, selecione um pet da tabela");
         }
+    }
+
+    public void btAtualizar(ActionEvent actionEvent) throws SQLException, IOException, ClassNotFoundException {
+        carregarTableViewAnimais();
     }
 }
