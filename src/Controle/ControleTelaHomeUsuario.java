@@ -42,7 +42,7 @@ public class ControleTelaHomeUsuario {
     }
 
     @FXML
-    void alteraDados(ActionEvent event) {Visao.App.trocaTela("alteraUser");
+    void alteraDados(ActionEvent event) {Visao.App.trocaTela("alteraDados");
     }
 
     @FXML

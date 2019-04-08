@@ -105,4 +105,13 @@ public class ControleRegistroVet {
         Visao.App.trocaTela("inicio");
     }
 
+    @FXML
+    void mkTelefone(KeyEvent event) {
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("(##)#####-####");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(textTelefone);
+        tff.formatter();
+    }
+
 }

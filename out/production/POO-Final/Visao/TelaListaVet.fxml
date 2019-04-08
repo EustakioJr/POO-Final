@@ -15,7 +15,7 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.ControleTelaListaVet">
    <children>
        <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-       <TableView fx:id="tableVeterionarios" layoutX="233.0" layoutY="62.0" prefHeight="300.0" prefWidth="367.0" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="62.0">
+       <TableView fx:id="tableVeterinarios" layoutX="233.0" layoutY="62.0" prefHeight="300.0" prefWidth="367.0" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="62.0">
          <columns>
             <TableColumn fx:id="colCrvm" prefWidth="186.0" text="CRVM" />
             <TableColumn fx:id="colNome" prefWidth="180.0" text="Nome" />

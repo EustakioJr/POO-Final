@@ -78,11 +78,11 @@ public class ClinicasDaoBanco implements ClinicaDao{
             ResultSet resultSet = statement.executeQuery();
 
             if (resultSet.next()){
-                String nome = resultSet.getString("Razão");
-                String endereco = resultSet.getString("Endereço");
-                String cnpj = resultSet.getString("CNPJ");
-                String telefone = resultSet.getString("Telefone");
-                String senha = resultSet.getString("Senha");
+                String nome = resultSet.getString("razao");
+                String endereco = resultSet.getString("endereco");
+                String cnpj = resultSet.getString("cnpj");
+                String telefone = resultSet.getString("telefone");
+                String senha = resultSet.getString("senha");
 
                 return new Clinicas(nome, username, endereco, cnpj, telefone, senha);
             }else return null;

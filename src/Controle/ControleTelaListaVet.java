@@ -22,7 +22,7 @@ public class ControleTelaListaVet implements Initializable {
     VeterinariosDaoBanco daoVeterinario = new VeterinariosDaoBanco();
 
     @FXML
-    private TableView<Veterinarios> tableVeterionarios;
+    private TableView<Veterinarios> tableVeterinarios;
 
     @FXML
     private TableColumn<Veterinarios, String> colCrvm;
@@ -76,7 +76,6 @@ public class ControleTelaListaVet implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         try {
             carregarTableViewVeterinarios();
-
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
@@ -86,7 +85,7 @@ public class ControleTelaListaVet implements Initializable {
         }
 
 
-        tableVeterionarios.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> selectItemClinicas(newValue));
+        tableVeterinarios.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> selectItemClinicas(newValue));
     }
 
     public void carregarTableViewVeterinarios() throws SQLException, ClassNotFoundException, IOException {
@@ -96,7 +95,7 @@ public class ControleTelaListaVet implements Initializable {
         listVeterinario = new ArrayList<>(daoVeterinario.getVeterinarios());
 
         observableListVeterinarios = FXCollections.observableArrayList(listVeterinario);
-        tableVeterionarios.setItems(observableListVeterinarios);
+        tableVeterinarios.setItems(observableListVeterinarios);
     }
 
     public void selectItemClinicas(Veterinarios veterinarios) {

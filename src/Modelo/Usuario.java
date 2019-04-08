@@ -15,8 +15,6 @@ import Excecoes.DataInvalida;
 
 
 public class Usuario {
-    private static int cont;
-    private final int ID;
     private String nome;
     private String username;
     private String cpf;
@@ -34,7 +32,6 @@ public class Usuario {
         this.cpf = cpf;
         this.nascimento = nascimento;
         this.senha = senha;
-        ID = ++cont;
     }
 
 
@@ -98,9 +95,5 @@ public class Usuario {
     @Override
     public int hashCode() {
         return Objects.hash(username, cpf);
-    }
-
-    public int getID() {
-        return ID;
     }
 }
